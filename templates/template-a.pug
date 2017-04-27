@@ -1,0 +1,79 @@
+extends shared/master.pug
+
+block pageContent
+    .wrapper
+        include shared/q-money-sidebar.pug
+        include shared/q-money-header.pug
+        main#pagecontent.q-money-main-content(role='main')
+            nav.page-actions.m-b-1(role='navigation')
+                a.link.link-back(href='#')
+                    i.icon-chevron-left
+                    | Back to section link
+                a.link.link-save-exit.hidden-xs-down(href='#') Save and exit
+                    i.icon-exit-to-app
+            .content-panel.card
+                .row
+                    .col-xs-12
+                        h2 About you
+                        p Please enter your name exactly as it appears on your ID documents.
+
+                // Form
+                .row
+                    .col-xs-12.col-sm-6.form-group
+                        label.form-label(for='address')
+                            | Address
+                        input.form-input.form-control(type='text', placeholder="80 George St, Sydney NSW 2000")
+                .row
+                    .col-xs-12.col-md-6.col-lg-6.form-group
+                        label.form-label(for='lengthStayYear')
+                            | How long have you lived here?
+                        select.selectpicker(data-style="btn-secondary", data-size="3")
+                            option 1 Year
+                            option 2 Year
+                            option 3 Year
+                    .col-xs-12.col-md-6.col-lg-6.form-group
+                        select.selectpicker.m-t-2(data-style="btn-secondary", data-size="3")
+                            option 6 Months
+                            option 12 Months
+                            option 18 Months
+                .row
+                    .col-xs-12.col-md-6.col-lg-6.form-group
+                        label.form-label(for='lengthStayYear')
+                            | Residential type
+                        select.selectpicker(data-style="btn-secondary", data-size="2")
+                            option Renting
+                            option Owner
+                hr
+                .row.form-group
+                    .col-xs-6
+                        a.link.link-add(href='#')
+                            i.icon-add-circle
+                            | Add another
+                    .col-xs-6
+                        p.text-xs-right.text-nowrap Up to $8,000 left to transfer
+                .checking-information-benefits.row.m-t-3.m-b-3
+                    .col-xs-12.col-md-4.checking-information-benefits--item.text-xs-center
+                        .card.card-inverse.card-primary.checking-information-benefits--symbol-1.d-flex.flex-items-xs-center.flex-items-xs-middle
+                            i.icon-qantas-points
+                        strong Earn 50,000 bonus Qantas Points
+                    .col-xs-12.col-md-4.checking-information-benefits--item.text-xs-center
+                        .card.card-inverse.card-primary.checking-information-benefits--symbol-2.d-flex.flex-items-xs-center.flex-items-xs-middle
+                            | $
+                        strong Receive Qantas lounge passes
+                    .col-xs-12.col-md-4.checking-information-benefits--item.text-xs-center
+                        .card.card-inverse.card-primary.checking-information-benefits--symbol-3.d-flex.flex-items-xs-center.flex-items-xs-middle
+                            | 0%
+                        strong Pay 0% p.a. on balance transfers for 14 months
+                .row.m-t-3.m-b-3
+                    .col-xs-12
+                        .spinner
+                .row
+                    .col-xs-12.col-md-6.col-lg-6.form-group.m-t-2
+                        button.btn.btn-primary.btn-block(type='button') Continue
+            p.text-xs-center.small.m-t-2.page-footer
+                | © Qantas Airways Limited ABN 16 009 661 901
+
+
+
+
+

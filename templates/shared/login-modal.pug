@@ -1,0 +1,27 @@
+mixin loginModal(ff,name,url)
+
+  #modalLogin.modal.fade(tabindex='-1', role='dialog', aria-labelledby='modalLogin', aria-hidden='true')
+    .modal-dialog.modal-sm(role='document')
+      .modal-content
+        .modal-header
+          button.close(type='button', data-dismiss='modal', aria-label='Close')
+            span(aria-hidden='true') &times;
+
+          h4#myModalLabel.modal-title.text-xs-center Log in
+        
+        .modal-body
+          form(action='')
+            fieldset.form-group
+              input.form-control(type='text', placeholder='', value='#{ff}')                   
+            fieldset.form-group
+              input.form-control(type='text', placeholder='', value='#{name}')                 
+            fieldset.form-group
+              input.form-control(type='password', placeholder='', value='password')                 
+            .checkbox.m-b-2
+              label.c-input.c-checkbox
+                input(type='checkbox')                         
+                span.c-indicator 
+                | Remember details
+
+        .modal-footer
+          a.btn.btn-primary(href='#{url}') Log in

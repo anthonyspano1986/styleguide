@@ -1,0 +1,75 @@
+h1#accordion.category-head Accordion
+
+section.row
+    article.col-sm-4
+        .row
+            .col-xs-12.col-sm-10
+                h4.no-top-margin-xs Basic accordion
+    article.col-sm-8
+        div
+            .code-source-wrapper
+                .module
+                    #accordionExampleOne.accordion-simple(role='tablist', aria-multiselectable='true')
+                        .card
+                            #headingOneBasic.card-header(role='tab')
+                                h6.m-b-0
+                                    a(data-toggle='collapse', data-parent='#accordionExampleOne', href='#collapseOneBasic', aria-expanded='true', aria-controls='collapseOneBasic')
+                                        | Collapsible Group Item
+                                        i.icon-chevron-down
+                            #collapseOneBasic.collapse.in(role='tabpanel', aria-labelledby='headingOneBasic')
+                                .card-block
+                                    | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven&apos;t heard of them accusamus labore sustainable VHS.
+section.row
+    article.col-sm-4
+        .row
+            .col-xs-12.col-sm-10
+                h4.no-top-margin-xs Complex accordion
+    article.col-sm-8
+        div
+            .code-source-wrapper
+                .module
+
+                    #accordionExampleTwo.accordion-complex(role='tablist', aria-multiselectable='true')
+                        .card
+                            #headingOneComplex.card-header(role='tab')
+                                h5.m-b-0
+                                    a(data-toggle='collapse', data-parent='#accordionExampleTwo', href='#collapseOneComplex', aria-expanded='true', aria-controls='collapseOneComplex')
+                                        | Proof of employment:
+                                        strong
+                                            |  Qantas Loyalty
+                                        i.icon-add-circle
+                            #collapseOneComplex.collapse.in(role='tabpanel', aria-labelledby='headingOneComplex')
+                                .card-block
+                                    .row.form-group.m-b-0
+                                        .col-sm-5
+                                            label.form-label(for='document_type')
+                                                | Document type
+                                            select.selectpicker(data-style="btn-secondary", data-size="3",id="document_type")
+                                                option Payslip
+                                                option Payslip
+                                                option Payslip
+                                        .col-sm-5.m-t-2
+                                            button.btn.btn-primary.btn-block(type='button') Add file
+                        .card
+                            #headingTwoComplex.card-header(role='tab')
+                                h5.m-b-0
+                                    a.collapsed(data-toggle='collapse', data-parent='#accordionExampleTwo', href='#collapseTwoComplex', aria-expanded='false', aria-controls='collapseTwoComplex')
+                                        | Proof of employment:
+                                        strong
+                                            |  Qantas Loyalty
+                                        i.icon-add-circle
+                            #collapseTwoComplex.collapse(role='tabpanel', aria-labelledby='headingTwoComplex')
+                                .card-block
+                                    | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven&apos;t heard of them accusamus labore sustainable VHS.
+                        .card
+                            #headingThreeComplex.card-header(role='tab')
+                                h5.m-b-0
+                                    a.collapsed(data-toggle='collapse', data-parent='#accordionExampleTwo', href='#collapseThreeComplex', aria-expanded='false', aria-controls='collapseThreeComplex')
+                                        | Proof of employment:
+                                        strong
+                                            |  Qantas Loyalty
+                                        i.icon-add-circle
+                            #collapseThreeComplex.collapse(role='tabpanel', aria-labelledby='headingThreeComplex')
+                                .card-block
+                                    | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven&apos;t heard of them accusamus labore sustainable VHS.
+

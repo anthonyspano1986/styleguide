@@ -1,0 +1,89 @@
+extends shared/master.pug
+
+block pageContent
+    .wrapper
+        include shared/q-money-sidebar.pug
+        include shared/q-money-header.pug
+        main#pagecontent.q-money-main-content(role='main')
+            .content-panel.card
+                .row
+                    .col-xs-12.col-lg-10.text-xs-center.m-x-auto
+                        h2.m-b-3 Great news, you’re conditionally approved for a Qantas Premier credit card
+                        p.lead-small.m-b-3
+                            | We just need to verify your {employment, income and address} details before we can finalise your application.
+                .row
+                    .col-xs-12.col-lg-12
+                        h4
+                            strong Please upload your documents below
+                        p You can upload PDF, PNG or JPG files, maximum 4MB each
+                .row
+                    .col-xs-12.col-lg-12
+                        #document-list.accordion-complex(role='tablist', aria-multiselectable='true')
+                            .card
+                                #document-list-heading-one.card-header(role='tab')
+                                    h5.m-b-0
+                                        a(data-toggle='collapse', data-parent='#document-list', href='#document-list-item-one', aria-expanded='true', aria-controls='document-list-item-one')
+                                            | Proof of employment:
+                                            strong
+                                                |  Qantas Loyalty
+                                            i.icon-add-circle
+                                #document-list-item-one.collapse.in(role='tabpanel', aria-labelledby='document-list-heading-one')
+                                    .card-block
+                                        .row.form-group.m-b-0
+                                            .col-xs-12.col-lg-5
+                                                label.form-label(for='document_type1')
+                                                    | Document type
+                                                select.selectpicker(data-style="btn-secondary", data-size="4",id="document_type1")
+                                                    option Select
+                                                    option Payslip
+                                                    option Payslip
+                                                    option Payslip
+                                            .col-xs-12.col-lg-4.m-t-2
+                                                button.btn.btn-primary.btn-block(type='button') Add file
+                            .card
+                                #document-list-heading-two.card-header(role='tab')
+                                    h5.m-b-0
+                                        a.collapsed(data-toggle='collapse', data-parent='#document-list', href='#document-list-item-two', aria-expanded='false', aria-controls='document-list-item-two')
+                                            | Proof of employment:
+                                            strong
+                                                |  Qantas Loyalty
+                                            i.icon-add-circle
+                                #document-list-item-two.collapse(role='tabpanel', aria-labelledby='document-list-heading-two')
+                                    .card-block
+                                        .row.form-group.m-b-0
+                                            .col-xs-12.col-lg-5
+                                                label.form-label(for='document_type2')
+                                                    | Document type
+                                                select.selectpicker(data-style="btn-secondary", data-size="4",id="document_type2")
+                                                    option Select
+                                                    option Payslip
+                                                    option Payslip
+                                                    option Payslip
+                                            .col-xs-12.col-lg-4.m-t-2
+                                                button.btn.btn-primary.btn-block(type='button') Add file
+                            .card
+                                #document-list-heading-three.card-header(role='tab')
+                                    h5.m-b-0
+                                        a.collapsed(data-toggle='collapse', data-parent='#document-list', href='#document-list-item-three', aria-expanded='false', aria-controls='document-list-item-three')
+                                            | Proof of employment:
+                                            strong
+                                                |  Qantas Loyalty
+                                            i.icon-add-circle
+                                #document-list-item-three.collapse(role='tabpanel', aria-labelledby='document-list-heading-three')
+                                    .card-block
+                                        .row.form-group.m-b-0
+                                            .col-xs-12.col-lg-5
+                                                label.form-label(for='document_type3')
+                                                    | Document type
+                                                select.selectpicker(data-style="btn-secondary", data-size="4",id="document_type3")
+                                                    option Select
+                                                    option Payslip
+                                                    option Payslip
+                                                    option Payslip
+                                            .col-xs-12.col-lg-4.m-t-2
+                                                button.btn.btn-primary.btn-block(type='button') Add file
+
+            p.text-xs-center.small.m-t-2.page-footer
+                | © Qantas Airways Limited ABN 16 009 661 901
+
+

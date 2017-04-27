@@ -1,0 +1,52 @@
+extends shared/master.pug
+
+block pageContent
+    .wrapper
+        include shared/q-money-sidebar.pug
+        include shared/q-money-header.pug
+        main#pagecontent.q-money-main-content(role='main')
+            nav.page-actions.m-b-1
+                a.link.link-back(href='#')
+                    i.icon-chevron-left
+                    | Back to section link
+                a.link.link-save-exit.hidden-xs-down(href='#') Save and exit
+                    i.icon-exit-to-app
+
+            .content-panel.card
+                .row
+                    .col-xs-12.col-sm-12.col-md-12.col-lg-12
+                        h2.m-b-1 Identity verification
+                        p To save you time, we can verify your identity online.
+                .row.form-group(aria-labelledby='id-check')
+                    .col-xs-12
+                        label.custom-control.custom-radio
+                            input.custom-control-input(name='id-check', type='radio', id='australian_driver_licence')
+                            span.custom-control-indicator
+                            span.custom-control-description Australian driver licence
+                    .col-xs-12
+                        label.custom-control.custom-radio
+                            input.custom-control-input(name='id-check', type='radio', id='passport')
+                            span.custom-control-indicator
+                            span.custom-control-description Passport
+                    .col-xs-12
+                        label.custom-control.custom-radio
+                            input.custom-control-input(name='id-check', type='radio', id='take_to_post')
+                            span.custom-control-indicator
+                            span.custom-control-description I'll take my ID documents to an Australian Post outlet once I've completed my application.
+                .row.form-group
+                    .col-xs-12.col-sm-12.col-md-12.col-lg-6
+                        label.form-label(for='state')
+                            | State
+                        select#state.selectpicker(data-style="btn-secondary", data-size="2")
+                            option(selected='', value='1') Select
+                            option NSW
+                .row.form-group
+                    .col-xs-12.col-sm-12.col-md-12.col-lg-6
+                        label.form-label(for='licence_number')
+                            | Licence number
+                        input#licence_number.form-control(type='text', placeholder='')
+                .row
+                    .col-xs-12.col-sm-12.col-md-12.col-lg-4.m-t-2
+                        button.btn.btn-primary.btn-block(type='submit') Next
+            p.text-xs-center.small.m-t-2.page-footer
+                | © Qantas Airways Limited ABN 16 009 661 901

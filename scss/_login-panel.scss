@@ -1,0 +1,135 @@
+.login-widget--default {
+  max-height: 0;
+  padding-top: 0;
+  box-shadow: 0 0.5rem 0 #e00 inset;
+  background: #f4f5f6;
+  overflow: hidden;
+  -webkit-transition: max-height .5s ease-in-out, padding-top 0 .5s ease-in-out;
+  transition: max-height .5s ease-in-out, padding-top 0 .5s ease-in-out;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.login-widget__heading {
+  background-color: #dadada;
+  padding: 1rem;
+  margin: 0;
+  line-height: 1rem;
+}
+
+a.internal-link:after, a.external-link:after {
+  content: '';
+  display: inline-block;
+  background-image: url(../img/spritesheet-6v2pcm7747.png);
+  background-position: -138px -77px;
+  width: 13px;
+  height: 9px;
+  margin-left: .5rem;
+}
+
+a.external-link {
+  &:after {
+    background-image: url(../img/spritesheet-6v2pcm7747.png);
+    background-position: -104px -77px;
+    width: 12px;
+    height: 13px;
+    margin-bottom: -.125rem;
+  }
+}
+
+.login-widget__link {
+  color: inherit;
+  font-weight: normal;
+  &:after {
+    background-image: url(../img/spritesheet-6v2pcm7747.png);
+    background-position: -138px -77px;
+    width: 13px;
+    height: 9px;
+    display: inline-block;
+    margin-top: .1875rem;
+    float: right;
+    content: '';
+  }
+}
+
+.login-widget__heading.brLogin {
+  padding-top: 0;
+}
+
+.login-widget__heading--last-child {
+  border-bottom: 0;
+  background: 0;
+  padding-bottom: 0;
+}
+
+.ql-login-widget {
+  color: #222;
+  padding: 0;
+  margin: 0;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.5;
+  position: relative;
+  cursor: auto;
+}
+
+.ql-login-grey-bg {
+  margin: 1rem 0;
+  background-color: #f4f5f6;
+  width: 100%;
+  overflow: hidden;
+}
+
+.ql-login-row {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 62.5rem;
+}
+
+.ql-login-widget > .ql-login-row > .ql-login-column {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.ql-login-12 {
+  width: 100%;
+}
+
+.ql-login-pin-row {
+  max-width: 200px;
+}
+
+.ql-login-column {
+  position: relative;
+  padding-left: .9375rem;
+  padding-right: .9375rem;
+  float: left;
+  width: 100%;
+}
+
+.ql-login-widget__label {
+  font-size: 14px;
+}
+
+.login-widget--open {
+  max-height: 48rem;
+  padding-top: .5rem;
+  -webkit-transition: max-height .5s ease-in-out, padding-top 0s ease-in-out;
+  transition: max-height .5s ease-in-out, padding-top 0s ease-in-out;
+}
+
+@media only screen and (min-width: 60em) {
+  .login-widget--default {
+    position: absolute;
+    top: -4rem;
+    right: 0rem;
+    width: 16.875rem;
+    z-index: 1000;
+    transition: max-height .3s ease-in-out, padding-top .3s ease-in-out;
+  }
+  .login-widget--open {
+    -webkit-transition: max-height .3s ease-in-out, padding-top 0s ease-in-out;
+    transition: max-height .3s ease-in-out, padding-top 0s ease-in-out;
+  }
+}
+

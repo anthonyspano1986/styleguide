@@ -1,0 +1,2656 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="user-scalable=yes, initial-scale=1, maximum-scale=2, minimum-scale=1, width=device-width, height=device-height">
+    <link rel="icon" href="path/to/favicon-16.png" sizes="16x16" type="image/png">
+    <link rel="icon" href="path/to/favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="path/to/favicon-48.png" sizes="48x48" type="image/png">
+    <link rel="icon" href="path/to/favicon-62.png" sizes="62x62" type="image/png">
+    <link rel="icon" href="path/to/favicon-192.png" sizes="192x192" type="image/png">
+    <!-- Add to homescreen for Safari on iOS-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="application-name" content="Qantas - Card Activation">
+    <meta name="apple-mobile-web-app-title" content="Qantas - Card Activation">
+    <!-- Tile icon for Win8 (144x144 + tile color)-->
+    <meta name="msapplication-TileImage" content="img/mobileicons/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#dd1916">
+    <!-- Color the status bar on mobile devices-->
+    <meta name="theme-color" content="#dd1916">
+    <!-- Disable tap highlight on IE-->
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- iPad non-retina portrait startup image-->
+    <link href="apple-touch-startup-image-portrait.png" media="(device-width: 768px) and (device-height: 1024px) and not (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" rel="apple-touch-startup-image">
+    <!-- iPad non-retina landscape startup image-->
+    <link href="apple-touch-startup-image-landscape.png" media="(device-width: 768px) and (device-height: 1024px) and not (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" rel="apple-touch-startup-image">
+    <!-- iPad retina portrait startup image-->
+    <link href="apple-touch-startup-image-portrait-retina.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" rel="apple-touch-startup-image">
+    <!-- iPad retina landscape startup image-->
+    <link href="apple-touch-startup-image-landscape-retina.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" rel="apple-touch-startup-image">
+    <!-- Tile icon for Win8 (144x144 + tile color)-->
+    <meta name="msapplication-TileImage" content="ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#000">
+    <!-- Facebook: https://developers.facebook.com/docs/sharing/webmasters#markup-->
+    <meta property="fb:app_id" content="123456789">
+    <meta property="og:url" content="https://example.com/page.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Content Title">
+    <meta property="og:image" content="https://example.com/image.jpg">
+    <meta property="og:description" content="Description Here">
+    <meta property="og:site_name" content="Site Name">
+    <meta property="og:locale" content="en_US">
+    <meta property="article:author" content="">
+    <!-- Twitter: https://dev.twitter.com/cards/getting-started-->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@site_account">
+    <meta name="twitter:creator" content="@individual_account">
+    <meta name="twitter:url" content="https://example.com/page.html">
+    <meta name="twitter:title" content="Content Title">
+    <meta name="twitter:description" content="Content description less than 200 characters">
+    <meta name="twitter:image" content="https://example.com/image.jpg">
+    <!-- Schema.org markup for Google+-->
+    <link href="https://plus.google.com/+YourPage" rel="publisher">
+    <meta itemprop="name" content="Content Title">
+    <meta itemprop="description" content="Content description less than 200 characters">
+    <meta itemprop="image" content="https://example.com/image.jpg">
+    <title>Qantas</title>
+    <!-- Bootstrap-->
+    <link href="css/bootstrap-flex.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/skiplinks.css" type="text/css">
+    <link rel="stylesheet" href="css/debug-wai-aria.css" type="text/css">
+  </head>
+  <body>
+    <ul class="skiplinks">
+      <li><a href="#pageheader">Jump to header</a></li>
+      <li><a href="#pagecontent">Jump to main content</a></li>
+      <li><a href="#pagefooter">Jump to footer</a></li>
+      <li><a href="#pagefooter">Jump to Qantas Accessibility Guide</a></li>
+    </ul>
+    <div class="styleguide">
+      <div class="clearfix">
+        <div class="sidebar">
+          <div class="sidebar-wrapper">
+            <div class="logo"><a href="/"><img src="img/logo_qantas.svg"></a></div>
+            <ul class="sidebar-nav-list list-unstyled" role="tablist" aria-multiselectable="true">
+              <li>
+                <h2 data-toggle="collapse" data-parent=".sidebar-nav-list" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">Brand</h2>
+                <div class="collapse" id="collapseOne" role="tabpanel" aria-labelledby="itemOne"><a href="#Colours">Colours</a><a href="#Fonts">Fonts</a></div>
+              </li>
+              <li>
+                <h2 data-toggle="collapse" data-parent=".sidebar-nav-list" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">CSS</h2>
+                <div class="collapse" id="collapseTwo" role="tabpanel" aria-labelledby="itemTwo"><a href="#Grid">Grid</a><a href="#Icons">Icons</a><a href="#typography">Typography</a><a href="#links">Links</a><a href="#buttons">Buttons</a><a href="#forms">Forms</a></div>
+              </li>
+              <li>
+                <h2 data-toggle="collapse" data-parent=".sidebar-nav-list" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Components</h2>
+                <div class="collapse" id="collapseThree" role="tabpanel" aria-labelledby="itemThree"><a href="#alerts">Alerts</a><a href="#modals">Modals</a><a href="#accordion">Accordion</a><a href="#tabs">Tabs</a><a href="#cards">Cards</a><a href="#stepNav">Step navigation</a><a href="#QMoneyHeader">Q money header</a><a href="#pageActions">Page actions</a><a href="#needHelpCallout">Need help callout</a><a href="#contentPanel">Content Panel</a><a href="#checkingInfoBenefits">Checking information benefits</a><a href="#spinner">Spinner</a><a href="#Tables">Tables</a><a href="#contentElements">Content elements</a></div>
+              </li>
+              <li>
+                <h2 data-toggle="collapse" data-parent=".sidebar-nav-list" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">Templates</h2>
+                <div class="collapse" id="collapseFour" role="tabpanel" aria-labelledby="itemFour">
+                  <!--a(href='template-a.html', target='_blank') Qantas Money Voyager-->
+                  <!--a(href='template-b.html', target='_blank') Qantas Homepage-->
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="cover"></div>
+      </div>
+      <header class="header">
+        <button class="hamburger js-toggleMenu"><span class="cheese"></span><span class="patty"></span><span class="salad"></span></button>
+        <h1 class="header-headline">Qantas Web Component Library</h1>
+      </header>
+      <main class="main-content bg-faded" role="main">
+        <div class="container-fluid">
+          <h1 class="category-head" id="Colours">Colors</h1>
+          <section class="row" id="primary-colours">
+            <article class="col-sm-4">
+              <h4>Primary colours</h4>
+            </article>
+            <article class="col-sm-8">
+              <ul class="sg-sample list-unstyled clearfix">
+                <li class="color-qantas-red">
+                  <div class="sample m-b-1"></div>
+                  <div class="title">name</div>
+                  <p>Qantas Red Solid</p>
+                  <div class="title">HEX</div>
+                  <p>#E40000</p>
+                  <div class="title">RGB</div>
+                  <p>R228 G0 B0</p>
+                  <div class="title">SASS</div>
+                  <p>$qantas-red</p>
+                </li>
+                <li class="color-qantas-red-gradient">
+                  <div class="sample m-b-1"></div>
+                  <div class="title">name</div>
+                  <p>Qantas Red Gradient</p>
+                  <div class="title">HEX</div>
+                  <p>#F70500 | #D20000</p>
+                  <div class="title">RGB</div>
+                  <p>R247 G5 B0 | R210 G0 B0</p>
+                  <div class="title">SASS</div>
+                  <p>$qantas-red</p>
+                </li>
+              </ul>
+            </article>
+          </section>
+          <section class="row" id="secondary-colours">
+            <article class="col-sm-4">
+              <h4>Secondary colours</h4>
+            </article>
+            <article class="col-sm-8">
+              <ul class="sg-sample list-unstyled clearfix">
+                <li class="color-qantas-bay-blue">
+                  <div class="sample m-b-1"></div>
+                  <div class="title">name</div>
+                  <p>Bay Blue</p>
+                  <div class="title">HEX</div>
+                  <p>#8DE2E0</p>
+                  <div class="title">RGB</div>
+                  <p>R141 G226 B224</p>
+                  <div class="title">SASS</div>
+                  <p>$qantas-bay-blue</p>
+                </li>
+              </ul>
+            </article>
+          </section>
+          <section class="row" id="tertiary-colours">
+            <article class="col-sm-4">
+              <h4>Tertiary colours</h4>
+            </article>
+            <article class="col-sm-8">
+              <ul class="sg-sample list-unstyled clearfix">
+                <li class="color-qantas-red-earth">
+                  <div class="sample m-b-1"></div>
+                  <div class="title">name</div>
+                  <p>Red Earth</p>
+                  <div class="title">HEX</div>
+                  <p>#D20000</p>
+                  <div class="title">RGB</div>
+                  <p>R210 G0 B0</p>
+                  <div class="title">SASS</div>
+                  <p>$qantas-red-earth</p>
+                </li>
+                <li class="color-qantas-sand">
+                  <div class="sample m-b-1"></div>
+                  <div class="title">name</div>
+                  <p>Sand</p>
+                  <div class="title">HEX</div>
+                  <p>#F9F3E9</p>
+                  <div class="title">RGB</div>
+                  <p>R249 G243 B233</p>
+                  <div class="title">SASS</div>
+                  <p>$qantas-sand</p>
+                </li>
+                <li class="color-qantas-ice-white">
+                  <div class="sample m-b-1"></div>
+                  <div class="title">name</div>
+                  <p>Ice White</p>
+                  <div class="title">HEX</div>
+                  <p>#F5F5F5</p>
+                  <div class="title">RGB</div>
+                  <p>R245 G245 B245</p>
+                  <div class="title">SASS</div>
+                  <p>$qantas-ice-white</p>
+                </li>
+                <li class="color-qantas-white">
+                  <div class="sample m-b-1"></div>
+                  <div class="title">name</div>
+                  <p>White</p>
+                  <div class="title">HEX</div>
+                  <p>#FFFFFF</p>
+                  <div class="title">RGB</div>
+                  <p>R255 G255 B255</p>
+                  <div class="title">SASS</div>
+                  <p>$qantas-white</p>
+                </li>
+                <li class="color-qantas-charcoal">
+                  <div class="sample m-b-1"></div>
+                  <div class="title">name</div>
+                  <p>Charcoal</p>
+                  <div class="title">HEX</div>
+                  <p>#323232</p>
+                  <div class="title">RGB</div>
+                  <p>R50 G50 B50</p>
+                  <div class="title">SASS</div>
+                  <p>$qantas-charcoal</p>
+                </li>
+                <li class="color-qantas-steel">
+                  <div class="sample m-b-1"></div>
+                  <div class="title">name</div>
+                  <p>Steel</p>
+                  <div class="title">HEX</div>
+                  <p>#555555</p>
+                  <div class="title">RGB</div>
+                  <p>R85 G85 B85</p>
+                  <div class="title">SASS</div>
+                  <p>$qantas-steel</p>
+                </li>
+              </ul>
+            </article>
+          </section>
+          <section class="row" id="error-colours">
+            <article class="col-sm-4">
+              <h4>Error & on focus colours</h4>
+            </article>
+            <article class="col-sm-8">
+              <ul class="sg-sample list-unstyled clearfix">
+                <li class="color-qantas-warning-orange">
+                  <div class="sample m-b-1"></div>
+                  <div class="title">name</div>
+                  <p>Warning orange</p>
+                  <div class="title">HEX</div>
+                  <p>#ED710B</p>
+                  <div class="title">RGB</div>
+                  <p>R237 G113 B11</p>
+                  <div class="title">SASS</div>
+                  <p>$qantas-warning-orange</p>
+                </li>
+                <li class="color-qantas-warning-orange-hover">
+                  <div class="sample m-b-1"></div>
+                  <div class="title">name</div>
+                  <p>Warning orange hover</p>
+                  <div class="title">HEX</div>
+                  <p>#F9F3E9</p>
+                  <div class="title">RGB</div>
+                  <p>R252 G235 B205</p>
+                  <div class="title">SASS</div>
+                  <p>$qantas-warning-orange-hover</p>
+                </li>
+                <li class="color-qantas-help-blue">
+                  <div class="sample m-b-1"></div>
+                  <div class="title">name</div>
+                  <p>Help blue</p>
+                  <div class="title">HEX</div>
+                  <p>#BFF4F2</p>
+                  <div class="title">RGB</div>
+                  <p>R191 G244 B242</p>
+                  <div class="title">SASS</div>
+                  <p>$qantas-help</p>
+                </li>
+                <li class="color-qantas-success">
+                  <div class="sample m-b-1"></div>
+                  <div class="title">name</div>
+                  <p>Success</p>
+                  <div class="title">HEX</div>
+                  <p>#009100</p>
+                  <div class="title">RGB</div>
+                  <p>R0 G145 B0</p>
+                  <div class="title">SASS</div>
+                  <p>$qantas-success</p>
+                </li>
+              </ul>
+            </article>
+          </section>
+          <section class="row" id="tier-colours">
+            <article class="col-sm-4">
+              <h4>Tier colours</h4>
+            </article>
+            <article class="col-sm-8">
+              <ul class="sg-sample list-unstyled clearfix">
+                <li class="color-qantas-bronze">
+                  <div class="sample m-b-1"></div>
+                  <div class="title">name</div>
+                  <p>Qantas Bronze</p>
+                  <div class="title">HEX</div>
+                  <p>#E40000</p>
+                  <div class="title">RGB</div>
+                  <p>R228 G0 B0</p>
+                  <div class="title">SASS</div>
+                  <p>$qantas-bronze</p>
+                </li>
+                <li class="color-qantas-silver">
+                  <div class="sample m-b-1"></div>
+                  <div class="title">name</div>
+                  <p>Qantas Silver</p>
+                  <div class="title">HEX</div>
+                  <p>#AAAAAA</p>
+                  <div class="title">RGB</div>
+                  <p>R170 G170 B170</p>
+                  <div class="title">SASS</div>
+                  <p>$qantas-silver</p>
+                </li>
+                <li class="color-qantas-gold">
+                  <div class="sample m-b-1"></div>
+                  <div class="title">name</div>
+                  <p>Qantas Gold</p>
+                  <div class="title">HEX</div>
+                  <p>#BEA675</p>
+                  <div class="title">RGB</div>
+                  <p>R190 G166 B117</p>
+                  <div class="title">SASS</div>
+                  <p>$qantas-gold</p>
+                </li>
+                <li class="color-qantas-platinum">
+                  <div class="sample m-b-1"></div>
+                  <div class="title">name</div>
+                  <p>Qantas Platinum</p>
+                  <div class="title">HEX</div>
+                  <p>#323232</p>
+                  <div class="title">RGB</div>
+                  <p>R50 G50 B50</p>
+                  <div class="title">SASS</div>
+                  <p>$qantas-platinum</p>
+                </li>
+                <li class="color-qantas-platinum-one">
+                  <div class="sample m-b-1"></div>
+                  <div class="title">name</div>
+                  <p>Qantas Platinum One</p>
+                  <div class="title">HEX</div>
+                  <p>#EBEBEB</p>
+                  <div class="title">RGB</div>
+                  <p>R235 G235 B235</p>
+                  <div class="title">SASS</div>
+                  <p>$qantas-platinum-one</p>
+                </li>
+                <li class="color-qantas-chairmans-lounge">
+                  <div class="sample m-b-1"></div>
+                  <div class="title">name</div>
+                  <p>Qantas Chairmans Lounge</p>
+                  <div class="title">HEX</div>
+                  <p>#1E1E1E</p>
+                  <div class="title">RGB</div>
+                  <p>R30 G30 B30</p>
+                  <div class="title">SASS</div>
+                  <p>$qantas-chairmans-lounge</p>
+                </li>
+              </ul>
+            </article>
+          </section>
+          <h1 class="category-head" id="Icons">Icons</h1>
+          <section class="row">
+            <article class="col-sm-4">
+              <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <h4 class="no-top-margin-xs">Icon set</h4>
+                </div>
+              </div>
+            </article>
+            <article class="col-sm-8">
+              <div>
+                <div class="code-source-wrapper">
+                  <div class="module">
+                    <ul class="icons-reference row">
+                      <li class="col-sm-3">
+                        <div class="icon-placeholder"><i class="icon-add-circle"></i></div>
+                        <input class="form-input form-control" type="text" placeholder=".icon-add-circle" readonly>
+                      </li>
+                      <li class="col-sm-3">
+                        <div class="icon-placeholder"><i class="icon-calendar"></i></div>
+                        <input class="form-input form-control" type="text" placeholder=".icon-calendar" readonly>
+                      </li>
+                      <li class="col-sm-3">
+                        <div class="icon-placeholder"><i class="icon-check"></i></div>
+                        <input class="form-input form-control" type="text" placeholder=".icon-check" readonly>
+                      </li>
+                      <li class="col-sm-3">
+                        <div class="icon-placeholder"><i class="icon-chevron-down"></i></div>
+                        <input class="form-input form-control" type="text" placeholder=".icon-chevron-down" readonly>
+                      </li>
+                      <li class="col-sm-3">
+                        <div class="icon-placeholder"><i class="icon-chevron-left"></i></div>
+                        <input class="form-input form-control" type="text" placeholder=".icon-chevron-left" readonly>
+                      </li>
+                      <li class="col-sm-3">
+                        <div class="icon-placeholder"><i class="icon-chevron-right"></i></div>
+                        <input class="form-input form-control" type="text" placeholder=".icon-chevron-right" readonly>
+                      </li>
+                      <li class="col-sm-3">
+                        <div class="icon-placeholder"><i class="icon-chevron-up"></i></div>
+                        <input class="form-input form-control" type="text" placeholder=".icon-chevron-up" readonly>
+                      </li>
+                      <li class="col-sm-3">
+                        <div class="icon-placeholder"><i class="icon-close"></i></div>
+                        <input class="form-input form-control" type="text" placeholder=".icon-close" readonly>
+                      </li>
+                      <li class="col-sm-3">
+                        <div class="icon-placeholder"><i class="icon-close-circle"></i></div>
+                        <input class="form-input form-control" type="text" placeholder=".icon-close-circle" readonly>
+                      </li>
+                      <li class="col-sm-3">
+                        <div class="icon-placeholder"><i class="icon-info"></i></div>
+                        <input class="form-input form-control" type="text" placeholder=".icon-info" readonly>
+                      </li>
+                      <li class="col-sm-3">
+                        <div class="icon-placeholder"><i class="icon-mail"></i></div>
+                        <input class="form-input form-control" type="text" placeholder=".icon-mail" readonly>
+                      </li>
+                      <li class="col-sm-3">
+                        <div class="icon-placeholder"><i class="icon-minus"></i></div>
+                        <input class="form-input form-control" type="text" placeholder=".icon-minus" readonly>
+                      </li>
+                      <li class="col-sm-3">
+                        <div class="icon-placeholder"><i class="icon-plus"></i></div>
+                        <input class="form-input form-control" type="text" placeholder=".icon-plus" readonly>
+                      </li>
+                      <li class="col-sm-3">
+                        <div class="icon-placeholder"><i class="icon-profile"></i></div>
+                        <input class="form-input form-control" type="text" placeholder=".icon-profile" readonly>
+                      </li>
+                      <li class="col-sm-3">
+                        <div class="icon-placeholder"><i class="icon-qantas-points"></i></div>
+                        <input class="form-input form-control" type="text" placeholder=".icon-qantas-points" readonly>
+                      </li>
+                      <li class="col-sm-3">
+                        <div class="icon-placeholder"><i class="icon-refresh"></i></div>
+                        <input class="form-input form-control" type="text" placeholder=".icon-refresh" readonly>
+                      </li>
+                      <li class="col-sm-3">
+                        <div class="icon-placeholder"><i class="icon-remove-circle"></i></div>
+                        <input class="form-input form-control" type="text" placeholder=".icon-remove-circle" readonly>
+                      </li>
+                      <li class="col-sm-3">
+                        <div class="icon-placeholder"><i class="icon-switch"></i></div>
+                        <input class="form-input form-control" type="text" placeholder=".icon-switch" readonly>
+                      </li>
+                      <li class="col-sm-3">
+                        <div class="icon-placeholder"><i class="icon-warning"></i></div>
+                        <input class="form-input form-control" type="text" placeholder=".icon-warning" readonly>
+                      </li>
+                      <li class="col-sm-3">
+                        <div class="icon-placeholder"><i class="icon-arrow-down"></i></div>
+                        <input class="form-input form-control" type="text" placeholder=".icon-arrow-down" readonly>
+                      </li>
+                      <li class="col-sm-3">
+                        <div class="icon-placeholder"><i class="icon-arrow-external"></i></div>
+                        <input class="form-input form-control" type="text" placeholder=".icon-arrow-external" readonly>
+                      </li>
+                      <li class="col-sm-3">
+                        <div class="icon-placeholder"><i class="icon-arrow-right"></i></div>
+                        <input class="form-input form-control" type="text" placeholder=".icon-arrow-right" readonly>
+                      </li>
+                      <li class="col-sm-3">
+                        <div class="icon-placeholder"><i class="icon-arrow-up"></i></div>
+                        <input class="form-input form-control" type="text" placeholder=".icon-arrow-up" readonly>
+                      </li>
+                      <li class="col-sm-3">
+                        <div class="icon-placeholder"><i class="icon-arrow-back"></i></div>
+                        <input class="form-input form-control" type="text" placeholder=".icon-arrow-back" readonly>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </section>
+          <h1 class="category-head" id="Fonts">Fonts</h1>
+          <section class="row">
+            <article class="col-sm-4">
+              <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <h4 class="no-top-margin-xs strong">Typography - Typeface</h4>
+                  <p>Use Ciutadella Regular as the primary typeface for headings, subheadings,body copy and T&Cs.</p>
+                  <p>As Ciutadella is available in a digital format, it is also our primary typeface in digital applications. This will help encourage a cohesive experience across all touchpoints.</p>
+                  <p>Use Ciutadella Medium for retail pricepoints in print and digital advertising.</p>
+                  <h5 class="m-t-2 strong">Correct usage</h5>
+                  <p>The headline must be set in sentence case. Do not typeset headline in all caps, or use any italic versions of Ciutadella. International digital font – Note: The font Noto Sans CJK TC Regular is used for Chinese copy in digital applications.</p>
+                  <p>The font Noto Sans CJK JP Regular is used for Japanese copy in digital applications.</p>
+                  <h5 class="m-t-2 strong">Typeface license</h5>
+                  <p>We have bought the Typeface license for all Qantas verticles to use across web an digital applications</p>
+                </div>
+              </div>
+            </article>
+            <article class="col-sm-8">
+              <div>
+                <div class="code-source-wrapper">
+                  <div class="module">
+                    <h4 class="strong">Ciutadella Regular -<br>Headings, subheadings, body copy and T&Cs</h4>
+                    <hr>
+                    <h1>AaBbCcDd<br>0123456789</h1>
+                    <h3>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789!@#$%&*()_+</h3>
+                    <h4 class="strong m-t-3">Ciutadella Medium -<br>Price points and destinations only (Retail advertising)</h4>
+                    <hr>
+                    <h1 class="strong">AaBbCcDd<br>0123456789</h1>
+                    <h3 class="strong">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789!@#$%&*()_+</h3>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </section>
+          <h1 class="category-head" id="Grid">Grid</h1>
+          <section class="row">
+            <div class="col-xs-12 grid-example">
+              <div class="row">
+                <div class="col-sm-12 col-xs-12">
+                  <p class="lead">Using a 12 column fluid grid allows us to use media queries to set breakpoints for any viewport. Columns can use different spans, be offset or hidden depending on the size of the viewport</p>
+                  <p class="text-muted">To help visualise the grid we have added alternating fill colour to the columns. This highlights the left and right padding. Normally columns would not have a fill colour.</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12 col-xs-12">
+                  <p>12 columns on all viewports<code class="classes">col-xs-1</code></p>
+                  <div class="row">
+                    <div class="col-xs-1">
+                      <div class="well">1</div>
+                    </div>
+                    <div class="col-xs-1">
+                      <div class="well">2</div>
+                    </div>
+                    <div class="col-xs-1">
+                      <div class="well">3</div>
+                    </div>
+                    <div class="col-xs-1">
+                      <div class="well">4</div>
+                    </div>
+                    <div class="col-xs-1">
+                      <div class="well">5</div>
+                    </div>
+                    <div class="col-xs-1">
+                      <div class="well">6</div>
+                    </div>
+                    <div class="col-xs-1">
+                      <div class="well">7</div>
+                    </div>
+                    <div class="col-xs-1">
+                      <div class="well">8</div>
+                    </div>
+                    <div class="col-xs-1">
+                      <div class="well">9</div>
+                    </div>
+                    <div class="col-xs-1">
+                      <div class="well">10</div>
+                    </div>
+                    <div class="col-xs-1">
+                      <div class="well">11</div>
+                    </div>
+                    <div class="col-xs-1">
+                      <div class="well">12</div>
+                    </div>
+                  </div>
+                  <hr>
+                  <p>3 columns on all viewports<code class="classes">col-xs-4</code></p>
+                  <div class="row">
+                    <div class="col-xs-4">
+                      <div class="well">1</div>
+                    </div>
+                    <div class="col-xs-4">
+                      <div class="well">2</div>
+                    </div>
+                    <div class="col-xs-4">
+                      <div class="well">3</div>
+                    </div>
+                  </div>
+                  <hr>
+                  <p>12 columns on small viewports and up. Stack columns on extra small<code class="classes">col-sm-1</code></p>
+                  <div class="row">
+                    <div class="col-sm-1">
+                      <div class="well">1</div>
+                    </div>
+                    <div class="col-sm-1">
+                      <div class="well">2</div>
+                    </div>
+                    <div class="col-sm-1">
+                      <div class="well">3</div>
+                    </div>
+                    <div class="col-sm-1">
+                      <div class="well">4</div>
+                    </div>
+                    <div class="col-sm-1">
+                      <div class="well">5</div>
+                    </div>
+                    <div class="col-sm-1">
+                      <div class="well">6</div>
+                    </div>
+                    <div class="col-sm-1">
+                      <div class="well">7</div>
+                    </div>
+                    <div class="col-sm-1">
+                      <div class="well">8</div>
+                    </div>
+                    <div class="col-sm-1">
+                      <div class="well">9</div>
+                    </div>
+                    <div class="col-sm-1">
+                      <div class="well">10</div>
+                    </div>
+                    <div class="col-sm-1">
+                      <div class="well">11</div>
+                    </div>
+                    <div class="col-sm-1">
+                      <div class="well">12</div>
+                    </div>
+                  </div>
+                  <hr>
+                  <p>Two column layout on medium and large viewports: First column spans 8<code class="classes">col-md-8</code> Second column spans 4<code class="classes">col-md-4</code> Stack both columns on small and extra small viewports</p>
+                  <div class="row">
+                    <div class="col-md-8">
+                      <div class="well">1</div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="well">2</div>
+                    </div>
+                  </div>
+                  <hr>
+                  <p>Stack the columns on extra small viewports<code class="classes">col-xs-12</code> but on small, medium and large viewports make the first column span 3<code class="classes">col-sm-3</code> and the second column span 9<code class="classes">col-sm-9</code></p>
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-3">
+                      <div class="well">1</div>
+                    </div>
+                    <div class="col-xs-12 col-sm-9">
+                      <div class="well">2</div>
+                    </div>
+                  </div>
+                  <hr>
+                  <p>offset this column by 1 column on all viewports</p>
+                  <div class="row">
+                    <div class="col-xs-11 offset-sm-1">
+                      <div class="well">1</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <h1 class="category-head" id="typography">Typography</h1>
+          <section class="row">
+            <article class="col-sm-4">
+              <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <h4 class="no-top-margin-xs">Headings</h4>
+                </div>
+              </div>
+            </article>
+            <article class="col-sm-8">
+              <div>
+                <div class="code-source-wrapper">
+                  <div class="module">
+                    <h1>Heading one style h1</h1>
+                    <p class="text-muted">Font size 46px | Line height 54px | letter spacing -0.5px</p>
+                    <hr>
+                    <h2>Heading two style h2</h2>
+                    <p class="text-muted">Font size 32px | Line height 45px | letter spacing 0</p>
+                    <hr>
+                    <h3>Heading three style h3</h3>
+                    <p class="text-muted">Font size 26px | Line height 32px | letter spacing 0</p>
+                    <hr>
+                    <h4>Heading four style h4</h4>
+                    <p class="text-muted">Font size 18px | Line height 27px | letter spacing 0</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </section>
+          <section class="row">
+            <article class="col-sm-4">
+              <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <h4 class="no-top-margin-xs">Intro large</h4>
+                </div>
+              </div>
+            </article>
+            <article class="col-sm-8">
+              <div class="code-source-wrapper">
+                <div class="module">
+                  <p class="lead">Intro copy large creating good vertical rhythm in your designs comes with a lot of practice, but also a lot of theory, and sometimes maths as well.</p>
+                  <p class="text-muted">Font size 30px | Line height 45px | letter spacing 0</p>
+                </div>
+              </div>
+            </article>
+          </section>
+          <section class="row hidden-xs-up">
+            <article class="col-sm-4">
+              <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <h4 class="no-top-margin-xs">Intro small</h4>
+                </div>
+              </div>
+            </article>
+            <article class="col-sm-8">
+              <div class="code-source-wrapper">
+                <div class="module">
+                  <p class="lead-small">Intro copy small creating good vertical rhythm in your designs comes with a lot of practice, but also a lot of theory, and sometimes maths as well.</p>
+                </div>
+              </div>
+            </article>
+          </section>
+          <section class="row">
+            <div class="col-sm-4">
+              <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <h4 class="no-top-margin-xs">Body Copy</h4>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-8">
+              <div class="code-source-wrapper">
+                <div class="module">
+                  <p>Body copy creating good vertical rhythm in your designs comes with a lot of practice, but also a lot of theory, and sometimes maths as well. Creating good vertical rhythm in your designs comes with a lot of practice, but also a lot of theory, and sometimes maths as well. Creating good vertical rhythm in your designs comes with a lot of practice, but also a lot of theory, and sometimes maths as well. Creating good vertical rhythm in your designs comes with a lot of practice, but also a lot of theory, and sometimes maths as well.</p>
+                  <p class="text-muted">Font size 18px | Line height 27px | letter spacing 0</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="row">
+            <div class="col-sm-4">
+              <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <h4 class="no-top-margin-xs">Description list</h4>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-8">
+              <div class="code-source-wrapper">
+                <div class="module">
+                  <dl class="row">
+                    <dt class="col-sm-3">Name</dt>
+                    <dd class="col-sm-9">Mr. John James Citizen</dd>
+                    <dt class="col-sm-3">Mobile</dt>
+                    <dd class="col-sm-9">0411 222 333</dd>
+                    <dt class="col-sm-3">Email</dt>
+                    <dd class="col-sm-9">john.citizen@emailaddress.com</dd>
+                    <dt class="col-sm-3">Date of birth</dt>
+                    <dd class="col-sm-9">10 Oct 1980</dd>
+                    <dt class="col-sm-3">Nationality</dt>
+                    <dd class="col-sm-9">Australia</dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="row">
+            <div class="col-sm-4">
+              <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <h4 class="no-top-margin-xs">Important information</h4>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-8">
+              <div class="code-source-wrapper">
+                <div class="module">
+                  <p class="small"><strong>Domestic Carriage (no international sectors on the itinerary)</strong></p>
+                  <p class="note-text asterisk">Within Australia, 4 Qantas Points are earned per AU$1 spent on time and kilometre charges, excluding GST, insurance and miscellaneous charges.</p>
+                  <p class="note-text double-asterisk">Within Australia, 4 Qantas Points are earned per AU$1 spent on time and kilometre charges, excluding GST, insurance and miscellaneous charges.</p>
+                  <ul class="small">
+                    <li>3 days in the case of damage to, loss or destruction of part only of an item of</li>
+                    <li>You must be a member of the Qantas Frequent Flyer program.</li>
+                    <li>To earn and redeem Qantas Points. Join online now. A joining fee may apply.</li>
+                    <li>Membership and Qantas Points are subject to the Qantas Frequent Flyer.</li>
+                  </ul>
+                  <ol class="small">
+                    <li>You must be a member of the Qantas Frequent Flyer program.</li>
+                    <li>To earn and redeem Qantas Points. Join online now. A joining fee may apply.</li>
+                    <li>Membership and Qantas Points are subject to the Qantas Frequent Flyer.</li>
+                    <li>Program terms and conditions.</li>
+                  </ol>
+                  <p class="text-muted">Font size 14px | Line height 22px | letter spacing 0</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="row hidden-xs-up">
+            <div class="col-sm-4">
+              <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <h4 class="no-top-margin-xs">Strong</h4>
+                  <p class="elegant">The strong element used for emphasising a snippet of text with a heavier font weight.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-8">
+              <div class="code-source-wrapper">
+                <div class="module">
+                  <p>
+                    Im used for emphasising a snippet of text with a heavier font-weight
+                    like this<strong>Look how strong I am</strong>and I havent even used the old b tag. Marvellous!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="row hidden-xs-up">
+            <div class="col-sm-4">
+              <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <h4 class="no-top-margin-xs">Emphasis</h4>
+                  <p class="elegant">This is used for emphasising a snippet of text. The default behaviour being italics.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-8">
+              <div class="code-source-wrapper">
+                <div class="module">
+                  <p>Im used for emphasising a snippet of text with italics like this<em>Look at me Ive been emphasised</em>and I havent even used the old i tag.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="row hidden-xs-up">
+            <div class="col-sm-4">
+              <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <h4 class="no-top-margin-xs">Text Alignment</h4>
+                  <p class="elegant top-margin3-xs">Align text to components with text alignment classes. text-left, text-center, text-right</p>
+                  <div class="row top-margin5-xs">
+                    <div class="col-xs-6">
+                      <p class="text-info">Base classes</p>
+                      <ul class="list-unstyled">
+                        <li><code class="classes">text-left</code></li>
+                        <li><code class="classes">text-center</code></li>
+                        <li><code class="classes">text-right</code></li>
+                        <li><code class="classes">text-justify</code></li>
+                      </ul>
+                    </div>
+                    <div class="col-xs-6">
+                      <p class="text-info">Modifier classes</p>
+                      <ul class="list-unstyled">
+                        <li>- none -</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-8">
+              <div class="code-source-wrapper">
+                <div class="module">
+                  <p class="text-left"><strong>Left aligned text.</strong><br>Aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sialiquam qualaboriosam, nisi olu voluptas nulla pariatur?</p>
+                  <hr>
+                  <p class="text-center"><strong>Center aligned text.</strong><br>Aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sialiquam qualaboriosam, nisi olu voluptas nulla pariatur?</p>
+                  <hr>
+                  <p class="text-right"><strong>Right aligned text.</strong><br>Aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sialiquam qualaboriosam, nisi olu voluptas nulla pariatur?</p>
+                  <hr>
+                  <p class="text-justify"><strong>Justified text.</strong><br>Aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sialiquam qualaboriosam, nisi olu voluptas nulla pariatur?</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="row hidden-xs-up">
+            <div class="col-sm-4">
+              <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <h4 class="no-top-margin-xs">Text Colour Emphasis</h4>
+                  <p class="elegant top-margin3-xs">Convey meaning through colour with these emphasis utility classes.</p>
+                  <div class="row top-margin5-xs">
+                    <div class="col-xs-6">
+                      <p class="text-info">Base classes</p>
+                      <ul class="list-unstyled">
+                        <li><code class="classes">text-muted</code></li>
+                        <li><code class="classes">text-primary</code></li>
+                        <li><code class="classes">text-danger</code></li>
+                        <li><code class="classes">text-info</code></li>
+                        <li><code class="classes">text-warning</code></li>
+                      </ul>
+                    </div>
+                    <div class="col-xs-6">
+                      <p class="text-info">Modifier classes</p>
+                      <ul class="list-unstyled">
+                        <li>- none -</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-8">
+              <div class="code-source-wrapper">
+                <div class="module">
+                  <p class="text-muted">Im text-muted. Im accessible on white but always check.</p>
+                  <p class="text-primary">Im text-primary. Im super accessible. Im all about being seen.</p>
+                  <p class="text-success">Im text-success. Im accessible.</p>
+                  <p class="text-danger">Im text-danger. Im accessible too</p>
+                  <p class="text-info">Im text-info. Im accessible. Please dont use me for anything else.</p>
+                  <p class="text-warning">Im text-warning. Im accessible. Dont use me for anything else either.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="row hidden-xs-up">
+            <div class="col-sm-4">
+              <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <h4 class="no-top-margin-xs">Abbreviations</h4>
+                  <p class="elegant top-margin3-xs">This is for abbreviations and acronyms to show the expanded version on hover. Abbreviations with a title attribute have a light dotted bottom border and a help cursor on hover, providing additional context on hover.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-8">
+              <div class="code-source-wrapper">
+                <div class="module">
+                  <p>Basic abbreviation: An abbreviation of the word attribute is<abbr title="attribute">attr</abbr></p>
+                  <p>Using the initialism class to make the text slightly smaller.<abbr class="initialism" title="HyperText Markup Language">HTML is the best thing since sliced bread</abbr></p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="row">
+            <div class="col-sm-4">
+              <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <h4 class="no-top-margin-xs">Blockquotes</h4>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-8">
+              <div class="code-source-wrapper">
+                <div class="module clearfix">
+                  <blockquote>
+                    <p>If you think good design is expensive, you should look at the cost of bad design.</p><small>Ralf Speth</small>
+                  </blockquote>
+                  <blockquote class="pull-right">
+                    <p>Good design is as little design as possible.</p><small>Dieter Rams</small>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="row">
+            <div class="col-sm-4">
+              <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <h4 class="no-top-margin-xs">Links within paragraph</h4>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-8">
+              <div class="code-source-wrapper">
+                <div class="module">
+                  <p></p>Im body text with an inline link or anchor<a href="#url">Im an inline text link click me.</a>
+                  Please note: It was recommended that text links be aubergine
+                  however I would recommend red as the aubergine text links are not easy
+                  to see when they are place in blocks of body text.
+                </div>
+              </div>
+            </div>
+          </section>
+          <h1 class="category-head" id="links">Links</h1>
+          <section class="row">
+            <article class="col-sm-4">
+              <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <h4 class="no-top-margin-xs">Body copy</h4>
+                </div>
+              </div>
+            </article>
+            <article class="col-sm-8">
+              <div>
+                <div class="code-source-wrapper">
+                  <div class="module"><a class="link link-default" href="#">Normal</a></div>
+                </div>
+              </div>
+            </article>
+          </section>
+          <section class="row">
+            <article class="col-sm-4">
+              <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <h4 class="no-top-margin-xs">Article - internal</h4>
+                </div>
+              </div>
+            </article>
+            <article class="col-sm-8">
+              <div>
+                <div class="code-source-wrapper">
+                  <div class="module"><a class="link link-internal" href="#">Normal<i class="icon-arrow-right"></i></a></div>
+                </div>
+              </div>
+            </article>
+          </section>
+          <section class="row">
+            <article class="col-sm-4">
+              <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <h4 class="no-top-margin-xs">Article - external</h4>
+                </div>
+              </div>
+            </article>
+            <article class="col-sm-8">
+              <div>
+                <div class="code-source-wrapper">
+                  <div class="module"><a class="link link-external" href="#">Normal<i class="icon-arrow-external"></i></a></div>
+                </div>
+              </div>
+            </article>
+          </section>
+          <section class="row">
+            <article class="col-sm-4">
+              <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <h4 class="no-top-margin-xs">Anchor links</h4>
+                </div>
+              </div>
+            </article>
+            <article class="col-sm-8">
+              <div>
+                <div class="code-source-wrapper">
+                  <div class="module"><a class="link link-anchor" href="#">Anchor link<i class="icon-arrow-down"></i></a></div>
+                </div>
+              </div>
+            </article>
+          </section>
+          <section class="row">
+            <article class="col-sm-4">
+              <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <h4 class="no-top-margin-xs">Back to top links</h4>
+                </div>
+              </div>
+            </article>
+            <article class="col-sm-8">
+              <div>
+                <div class="code-source-wrapper">
+                  <div class="module"><a class="link link-top" href="#">Back to top<i class="icon-arrow-up"></i></a></div>
+                </div>
+              </div>
+            </article>
+          </section>
+          <section class="row">
+            <article class="col-sm-4">
+              <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <h4 class="no-top-margin-xs">Back to section link</h4>
+                </div>
+              </div>
+            </article>
+            <article class="col-sm-8">
+              <div>
+                <div class="code-source-wrapper">
+                  <div class="module"><a class="link link-back" href="#"><i class="icon-arrow-back"></i>Back to section link</a></div>
+                </div>
+              </div>
+            </article>
+          </section>
+          <section class="row">
+            <article class="col-sm-4">
+              <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <h4 class="no-top-margin-xs">Back to section link</h4>
+                </div>
+              </div>
+            </article>
+            <article class="col-sm-8">
+              <div>
+                <div class="code-source-wrapper">
+                  <div class="module"><a class="link link-add" href="#"><i class="icon-add-circle"></i>Add another</a></div>
+                </div>
+              </div>
+            </article>
+          </section>
+          <section class="row">
+            <article class="col-sm-4">
+              <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <h4 class="no-top-margin-xs">Sibling navigation</h4>
+                </div>
+              </div>
+            </article>
+            <article class="col-sm-8">
+              <div>
+                <div class="code-source-wrapper">
+                  <div class="module">
+                    <nav class="nav nav-pills nav-stacked nav-sibling"><a class="nav-link active" href="#">Active</a><a class="nav-link" href="#">Link</a><a class="nav-link" href="#">Link</a></nav>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </section>
+          <h1 class="category-head" id="buttons">Buttons</h1>
+          <section class="row">
+            <article class="col-sm-4">
+              <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <h4 class="no-top-margin-xs">Form action button</h4>
+                </div>
+              </div>
+            </article>
+            <article class="col-sm-8">
+              <div>
+                <div class="code-source-wrapper">
+                  <div class="module">
+                    <div class="col-sm-6 m-b-1"><a class="btn btn-primary btn-block" href="#">Default</a></div>
+                    <div class="col-sm-6 m-b-1"><a class="btn btn-primary active btn-block" href="#">Active</a></div>
+                    <div class="col-sm-6 m-b-1"><a class="btn btn-primary disabled btn-block" href="#">Disabled</a></div>
+                    <p class="col-sm-12 m-b-0 text-muted">Font size 16px | Line height 20px | letter spacing 1.5px</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </section>
+          <section class="row">
+            <article class="col-sm-4">
+              <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <h4 class="no-top-margin-xs">General action button</h4>
+                </div>
+              </div>
+            </article>
+            <article class="col-sm-8">
+              <div>
+                <div class="code-source-wrapper">
+                  <div class="module">
+                    <div class="col-sm-6 m-b-1"><a class="btn btn-outline-primary btn-block" href="#">Default</a></div>
+                    <div class="col-sm-6 m-b-1"><a class="btn btn-outline-primary active btn-block" href="#">Active</a></div>
+                    <div class="col-sm-6 m-b-1"><a class="btn btn-outline-primary disabled btn-block" href="#">Disabled</a></div>
+                    <p class="col-sm-12 m-b-0 text-muted">Font size 16px | Line height 20px | letter spacing 1.5px</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </section>
+          <section class="row">
+            <article class="col-sm-4">
+              <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <h4 class="no-top-margin-xs">Card action button</h4>
+                </div>
+              </div>
+            </article>
+            <article class="col-sm-8">
+              <div>
+                <div class="code-source-wrapper">
+                  <div class="module module-raised">
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <div class="card">
+                          <div class="card-block"></div>
+                          <div class="card-footer"><a class="btn btn-link btn-block" href="#">Card action</a></div>
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="card">
+                          <div class="card-block"></div>
+                          <div class="card-footer"><a class="btn btn-link btn-block btn-terms-condition" href="#">Terms & condition action</a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </section>
+          <section class="row">
+            <article class="col-sm-4">
+              <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <h4 class="no-top-margin-xs">Link group</h4>
+                </div>
+              </div>
+            </article>
+            <article class="col-sm-8">
+              <div>
+                <div class="code-source-wrapper">
+                  <div class="module module-raised">
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <div class="list-group"><a class="list-group-item list-group-item-action" href="#">Dapibus ac facilisis in</a><a class="list-group-item list-group-item-action" href="#">Morbi leo risus</a></div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="list-group"><a class="list-group-item list-group-item-action" href="#">Dapibus ac facilisis in</a><a class="list-group-item list-group-item-action" href="#">Morbi leo risus</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </section>
+          <section class="row">
+            <article class="col-sm-4">
+              <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <h4 class="no-top-margin-xs">Button group</h4>
+                </div>
+              </div>
+            </article>
+            <article class="col-sm-8">
+              <div>
+                <div class="code-source-wrapper">
+                  <div class="module">
+                    <div class="col-sm-6 m-b-1">
+                      <!--a.btn.btn-outline-primary.btn-block(href='#') Default-->
+                      <div class="btn-group" role="group" aria-label="Basic example">
+                        <button class="btn btn-secondary" type="button">Item 1</button>
+                        <button class="btn btn-secondary" type="button">Item 2</button>
+                        <button class="btn btn-secondary" type="button">Item 3</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </section>
+          <section class="row">
+            <article class="col-sm-4">
+              <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <h4 class="no-top-margin-xs">File browser</h4>
+                </div>
+              </div>
+            </article>
+            <article class="col-sm-8">
+              <div>
+                <div class="code-source-wrapper">
+                  <div class="module">
+                    <div class="col-sm-6 m-b-1">
+                      <label class="custom-file">
+                        <input class="custom-file-input" id="file" type="file"><span class="custom-file-control"></span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </section>
+          <section class="row">
+            <article class="col-sm-4">
+              <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <h4 class="no-top-margin-xs">Add / Remove buttons</h4>
+                </div>
+              </div>
+            </article>
+            <article class="col-sm-8">
+              <div>
+                <div class="code-source-wrapper">
+                  <div class="module">
+                    <div class="col-sm-6 m-b-1">
+                      <button class="btn btn-add btn-outline-success btn-sm" type="button"><i class="icon-add-circle"></i>Add</button>
+                    </div>
+                    <div class="col-sm-6 m-b-1">
+                      <button class="btn btn-remove btn-outline-primary btn-sm" type="button"><i class="icon-remove-circle"></i>Remove</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </section>
+          <section class="row">
+            <article class="col-sm-4">
+              <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <h4 class="no-top-margin-xs">Button with spinner</h4>
+                </div>
+              </div>
+            </article>
+            <article class="col-sm-8">
+              <div>
+                <div class="code-source-wrapper">
+                  <div class="module">
+                    <div class="col-sm-6"><a class="btn btn-primary btn-block" href="#"><span class="label">Default</span>
+                        <div class="spinner-wrapper">
+                          <div class="spinner spinner-light"></div>
+                        </div></a></div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </section>
+          <h1 class="category-head" id="forms">Forms</h1>
+          <section class="row">
+            <article class="col-sm-4">
+              <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <h4 class="no-top-margin-xs">Text Input</h4>
+                </div>
+              </div>
+            </article>
+            <article class="col-sm-8">
+              <div class="code-source-wrapper">
+                <div class="module code-example-source">
+                  <form role="form">
+                    <!-- Text input-->
+                    <div class="form-group">
+                      <label class="form-label col-sm-12" for="defaultInputText">Normal</label>
+                      <div class="col-sm-12">
+                        <input class="form-input form-control" type="text" placeholder="I'm a text input">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label col-sm-12" for="defaultInputText">Focus</label>
+                      <div class="col-sm-12">
+                        <input class="form-input form-control focus" type="text" placeholder="I'm a text input">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label col-sm-12" for="defaultInputText">Disabled</label>
+                      <div class="col-sm-12">
+                        <input class="form-input form-control" type="text" placeholder="I'm a text input" disabled>
+                      </div>
+                    </div>
+                    <div class="form-group has-danger">
+                      <label class="form-label col-sm-12" for="defaultInputText">Error</label>
+                      <div class="col-sm-12">
+                        <input class="form-input form-control" type="text" placeholder="I'm a text input">
+                        <p class="form-text">Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.</p>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </article>
+          </section>
+          <section class="row">
+            <article class="col-sm-4">
+              <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <h4 class="no-top-margin-xs">Text Input with help</h4>
+                </div>
+              </div>
+            </article>
+            <article class="col-sm-8">
+              <div class="code-source-wrapper">
+                <div class="module code-example-source">
+                  <form role="form">
+                    <!-- Text input-->
+                    <div class="form-group">
+                      <label class="form-label col-sm-12 d-inline-block" for="defaultInputText">Label<a class="tooltip-trigger pull-xs-right" data-trigger="click" data-placement="top" data-toggle="tooltip" title="This is an example of a help text in context of what the user needs to supply in order for the form to validate"><i class="icon-info"></i></a></label>
+                      <div class="col-sm-12">
+                        <input class="form-input form-control" type="text" placeholder="I'm a text input">
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </article>
+          </section>
+          <section class="row">
+            <article class="col-sm-4">
+              <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <h4 class="no-top-margin-xs">Text Input with help link</h4>
+                </div>
+              </div>
+            </article>
+            <article class="col-sm-8">
+              <div class="code-source-wrapper">
+                <div class="module code-example-source">
+                  <form role="form">
+                    <!-- Text input-->
+                    <div class="form-group">
+                      <label class="form-label col-sm-12 d-inline-block" for="defaultInputText">Label<a class="link link-default pull-xs-right" href="#">Help link</a></label>
+                      <div class="col-sm-12">
+                        <input class="form-input form-control" type="text" placeholder="I'm a text input">
+                        <!--button.btn.btn-lg.btn-danger(data-placement="top", type='button', data-toggle='popover', data-content="And here's some amazing content. It's very engaging. Right?") Click to toggle popover-->
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </article>
+          </section>
+          <section class="row">
+            <article class="col-sm-4">
+              <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <h4 class="no-top-margin-xs">Dropdown menu</h4>
+                </div>
+              </div>
+            </article>
+            <article class="col-sm-8">
+              <div class="code-source-wrapper">
+                <div class="module code-example-source">
+                  <form role="form">
+                    <!-- Text input-->
+                    <div class="form-group">
+                      <label class="form-label col-sm-12" for="defaultInputText">Label</label>
+                      <div class="col-sm-12">
+                        <select class="selectpicker" data-style="btn-secondary" data-size="5">
+                          <option>Mustard</option>
+                          <option>Ketchup</option>
+                          <option>Relish</option>
+                          <option>Mustard</option>
+                          <option>Ketchup</option>
+                          <option>Relish</option>
+                          <option>Mustard</option>
+                        </select>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </article>
+          </section>
+          <section class="row hidden-xs-up">
+            <article class="col-sm-4">
+              <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <h4 class="no-top-margin-xs">Typeahead menu</h4>
+                </div>
+              </div>
+            </article>
+            <article class="col-sm-8">
+              <div class="code-source-wrapper">
+                <div class="module code-example-source">
+                  <form role="form">
+                    <!-- Text input-->
+                    <div class="form-group">
+                      <label class="form-label col-sm-12" for="defaultInputText">Label</label>
+                      <div class="col-sm-12">
+                        <select class="selectpicker" data-style="btn-secondary" data-live-search="true">
+                          <option data-tokens="ketchup mustard">Hot Dog, Fries and a Soda</option>
+                          <option data-tokens="mustard">Burger, Shake and a Smile</option>
+                          <option data-tokens="frosting">Sugar, Spice and all things nice</option>
+                        </select>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </article>
+          </section>
+          <section class="row">
+            <article class="col-sm-4">
+              <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <h4 class="no-top-margin-xs">Amount picker</h4>
+                </div>
+              </div>
+            </article>
+            <article class="col-sm-8">
+              <div class="code-source-wrapper">
+                <div class="module code-example-source">
+                  <form role="form">
+                    <!-- Text input-->
+                    <div class="form-group">
+                      <label class="form-label col-sm-12" for="defaultInputText">Label</label>
+                      <div class="col-sm-12">
+                        <div class="amount-picker">
+                          <input class="form-input form-control" id="amountPicker" type="text" value="1">
+                          <button class="btn btn-link btn-minus" id="MinusButton" type="button"><i class="icon-minus"></i></button>
+                          <button class="btn btn-link btn-plus" id="AddButton" type="button"><i class="icon-plus"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </article>
+          </section>
+          <section class="row">
+            <article class="col-sm-4">
+              <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <h4 class="no-top-margin-xs">Date picker</h4>
+                </div>
+              </div>
+            </article>
+            <article class="col-sm-8">
+              <div class="code-source-wrapper">
+                <div class="module code-example-source">
+                  <form role="form">
+                    <!-- Text input-->
+                    <div class="form-group">
+                      <label class="form-label col-sm-12" for="defaultInputText">Label</label>
+                      <div class="col-sm-12">
+                        <div class="date-picker">
+                          <input class="form-input form-control" type="text" placeholder="Mon 17 Nov 2016">
+                          <button class="btn btn-link" type="button"><i class="icon-calendar"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </article>
+          </section>
+          <section class="row">
+            <article class="col-sm-4">
+              <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <h4 class="no-top-margin-xs">Checkbox</h4>
+                </div>
+              </div>
+            </article>
+            <article class="col-sm-8">
+              <div class="code-source-wrapper">
+                <div class="module code-example-source">
+                  <form class="form-horizontal" role="form">
+                    <!-- Checkbox input-->
+                    <div class="form-group">
+                      <div class="col-sm-12">
+                        <label class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox"><span class="custom-control-indicator"></span><span class="custom-control-description">Normal</span>
+                        </label>
+                      </div>
+                      <div class="col-sm-12">
+                        <label class="custom-control custom-checkbox">
+                          <input class="custom-control-input focus" type="checkbox"><span class="custom-control-indicator"></span><span class="custom-control-description">Focus</span>
+                        </label>
+                      </div>
+                      <div class="col-sm-12">
+                        <label class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" checked><span class="custom-control-indicator"></span><span class="custom-control-description">Selected</span>
+                        </label>
+                      </div>
+                      <div class="col-sm-12 has-danger">
+                        <label class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox"><span class="custom-control-indicator"></span><span class="custom-control-description">Error</span>
+                        </label>
+                      </div>
+                      <div class="col-sm-12">
+                        <label class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" disabled><span class="custom-control-indicator"></span><span class="custom-control-description">Disabled</span>
+                        </label>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </article>
+          </section>
+          <section class="row">
+            <article class="col-sm-4">
+              <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <h4 class="no-top-margin-xs">Radio button</h4>
+                </div>
+              </div>
+            </article>
+            <article class="col-sm-8">
+              <div class="code-source-wrapper">
+                <div class="module code-example-source">
+                  <form class="form-horizontal" role="form">
+                    <!-- Radio button-->
+                    <div class="form-group">
+                      <div class="col-sm-12">
+                        <label class="custom-control custom-radio">
+                          <input class="custom-control-input" name="radio" type="radio"><span class="custom-control-indicator"></span><span class="custom-control-description">Normal</span>
+                        </label>
+                      </div>
+                      <div class="col-sm-12">
+                        <label class="custom-control custom-radio">
+                          <input class="custom-control-input focus" name="radio" type="radio"><span class="custom-control-indicator"></span><span class="custom-control-description">Focus</span>
+                        </label>
+                      </div>
+                      <div class="col-sm-12">
+                        <label class="custom-control custom-radio">
+                          <input class="custom-control-input" name="radio" type="radio" checked><span class="custom-control-indicator"></span><span class="custom-control-description">Selected</span>
+                        </label>
+                      </div>
+                      <div class="col-sm-12 has-danger">
+                        <label class="custom-control custom-radio">
+                          <input class="custom-control-input" name="radio" type="radio"><span class="custom-control-indicator"></span><span class="custom-control-description">Error</span>
+                        </label>
+                      </div>
+                      <div class="col-sm-12">
+                        <label class="custom-control custom-radio">
+                          <input class="custom-control-input" name="radio" type="radio" disabled><span class="custom-control-indicator"></span><span class="custom-control-description">Disabled</span>
+                        </label>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </article>
+          </section>
+          <h1 class="category-head" id="alerts">Alerts</h1>
+          <section class="row">
+            <article class="col-sm-4">
+              <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <h4 class="no-top-margin-xs">Warning alert</h4>
+                </div>
+              </div>
+            </article>
+            <article class="col-sm-8">
+              <div>
+                <div class="code-source-wrapper">
+                  <div class="module">
+                    <div class="col-sm-12">
+                      <div class="alert alert-warning clearfix" role="alert"><i class="icon-warning"></i>
+                        <h6>Warning message goes here</h6>
+                        <ul>
+                          <li>Warning item 1</li>
+                          <li>Warning item 2</li>
+                          <li>Warning item 3</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </section>
+          <section class="row">
+            <article class="col-sm-4">
+              <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <h4 class="no-top-margin-xs">Information alert</h4>
+                </div>
+              </div>
+            </article>
+            <article class="col-sm-8">
+              <div>
+                <div class="code-source-wrapper">
+                  <div class="module">
+                    <div class="col-sm-12">
+                      <div class="alert alert-info clearfix" role="alert"><i class="icon-info"></i>
+                        <h6 class="m-b-0">Information message goes here</h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </section>
+          <section class="row">
+            <article class="col-sm-4">
+              <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <h4 class="no-top-margin-xs">Error alert</h4>
+                </div>
+              </div>
+            </article>
+            <article class="col-sm-8">
+              <div>
+                <div class="code-source-wrapper">
+                  <div class="module">
+                    <div class="col-sm-12">
+                      <div class="alert alert-danger clearfix" role="alert"><i class="icon-info"></i>
+                        <h6 class="m-b-0">Error message goes here</h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </section>
+          <section class="row">
+            <article class="col-sm-4">
+              <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <h4 class="no-top-margin-xs">Success alert</h4>
+                </div>
+              </div>
+            </article>
+            <article class="col-sm-8">
+              <div>
+                <div class="code-source-wrapper">
+                  <div class="module">
+                    <div class="col-sm-12">
+                      <div class="alert alert-success clearfix" role="alert"><i class="icon-info"></i>
+                        <h6 class="m-b-0">Success message goes here</h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </section>
+          <h1 class="category-head" id="modals">Modals</h1>
+          <section class="row">
+            <article class="col-sm-4">
+              <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <h4 class="no-top-margin-xs">Basic example with trigger</h4>
+                </div>
+              </div>
+            </article>
+            <article class="col-sm-8">
+              <div>
+                <div class="code-source-wrapper">
+                  <button class="btn btn-primary btn-block col-xs-12 col-sm-6 pull-xs-left" type="button" data-toggle="modal" data-target="#exampleModal">Trigger modal</button>
+                  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button class="close" type="button" data-dismiss="modal" aria-label="Close"><i class="icon-close"></i></button>
+                          <h2 class="modal-title">Modal title</h2>
+                        </div>
+                        <div class="modal-body">
+                          <p>Your changes have not been saved. Would you like to save them before leaving this page?</p>
+                        </div>
+                        <div class="modal-footer">
+                          <button class="btn btn-secondary" type="button" data-dismiss="modal">Close</button>
+                          <button class="btn btn-primary" type="button">Save changes</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </section>
+          <section class="row">
+            <article class="col-sm-4">
+              <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <h4 class="no-top-margin-xs">Basic example</h4>
+                </div>
+              </div>
+            </article>
+            <article class="col-sm-8">
+              <div>
+                <div class="code-source-wrapper">
+                  <div class="module">
+                    <div class="modal-backdrop">
+                      <div class="modal">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button class="close" type="button" data-dismiss="modal" aria-label="Close"><i class="icon-close"></i></button>
+                              <h2 class="modal-title">Save your changes?</h2>
+                            </div>
+                            <div class="modal-body">
+                              <p>Your changes have not been saved. Would you like to save them before leaving this page?</p>
+                              <div class="form-group hidden-xs-up">
+                                <label class="form-label" for="">Normal</label>
+                                <input class="form-input form-control" type="text" placeholder="I'm a text input">
+                              </div>
+                              <div class="form-group hidden-xs-up">
+                                <label class="form-label" for="">Normal</label>
+                                <input class="form-input form-control" type="text" placeholder="I'm a text input">
+                              </div>
+                            </div>
+                            <div class="modal-footer">
+                              <button class="btn btn-primary btn-block col-xs-12 col-sm-6 pull-xs-left" type="button">Save</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </section>
+          <section class="row">
+            <article class="col-sm-4">
+              <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <h4 class="no-top-margin-xs">Form example</h4>
+                </div>
+              </div>
+            </article>
+            <article class="col-sm-8">
+              <div>
+                <div class="code-source-wrapper">
+                  <div class="module">
+                    <div class="modal-backdrop">
+                      <div class="modal">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button class="close" type="button" data-dismiss="modal" aria-label="Close"><i class="icon-close"></i></button>
+                              <h2 class="modal-title">Save your changes?</h2>
+                            </div>
+                            <div class="modal-body">
+                              <p>Your changes have not been saved. Would you like to save them before leaving this page?</p>
+                              <div class="form-group">
+                                <label class="form-label" for="defaultInputText">Normal</label>
+                                <input class="form-input form-control" type="text" placeholder="I'm a text input">
+                              </div>
+                              <div class="form-group">
+                                <label class="form-label" for="defaultInputText">Normal</label>
+                                <input class="form-input form-control" type="text" placeholder="I'm a text input">
+                              </div>
+                            </div>
+                            <div class="modal-footer">
+                              <div class="row flex-items-xs-middle">
+                                <div class="col-xs-6">
+                                  <button class="btn btn-primary btn-block pull-xs-left" type="button">Save</button>
+                                </div>
+                                <div class="col-xs-6"><a class="link link-default pull-xs-left" href="#">Optional link</a></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </section>
+          <h1 class="category-head" id="accordion">Accordion</h1>
+          <section class="row">
+            <article class="col-sm-4">
+              <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <h4 class="no-top-margin-xs">Basic accordion</h4>
+                </div>
+              </div>
+            </article>
+            <article class="col-sm-8">
+              <div>
+                <div class="code-source-wrapper">
+                  <div class="module">
+                    <div class="accordion-simple" id="accordionExampleOne" role="tablist" aria-multiselectable="true">
+                      <div class="card">
+                        <div class="card-header" id="headingOneBasic" role="tab">
+                          <h6 class="m-b-0"><a data-toggle="collapse" data-parent="#accordionExampleOne" href="#collapseOneBasic" aria-expanded="true" aria-controls="collapseOneBasic">Collapsible Group Item<i class="icon-chevron-down"></i></a></h6>
+                        </div>
+                        <div class="collapse in" id="collapseOneBasic" role="tabpanel" aria-labelledby="headingOneBasic">
+                          <div class="card-block">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven&apos;t heard of them accusamus labore sustainable VHS.</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </section>
+          <section class="row">
+            <article class="col-sm-4">
+              <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <h4 class="no-top-margin-xs">Complex accordion</h4>
+                </div>
+              </div>
+            </article>
+            <article class="col-sm-8">
+              <div>
+                <div class="code-source-wrapper">
+                  <div class="module">
+                    <div class="accordion-complex" id="accordionExampleTwo" role="tablist" aria-multiselectable="true">
+                      <div class="card">
+                        <div class="card-header" id="headingOneComplex" role="tab">
+                          <h5 class="m-b-0"><a data-toggle="collapse" data-parent="#accordionExampleTwo" href="#collapseOneComplex" aria-expanded="true" aria-controls="collapseOneComplex">Proof of employment:<strong> Qantas Loyalty</strong><i class="icon-add-circle"></i></a></h5>
+                        </div>
+                        <div class="collapse in" id="collapseOneComplex" role="tabpanel" aria-labelledby="headingOneComplex">
+                          <div class="card-block">
+                            <div class="row form-group m-b-0">
+                              <div class="col-sm-5">
+                                <label class="form-label" for="document_type">Document type</label>
+                                <select class="selectpicker" data-style="btn-secondary" data-size="3" id="document_type">
+                                  <option>Payslip</option>
+                                  <option>Payslip</option>
+                                  <option>Payslip</option>
+                                </select>
+                              </div>
+                              <div class="col-sm-5 m-t-2">
+                                <button class="btn btn-primary btn-block" type="button">Add file</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header" id="headingTwoComplex" role="tab">
+                          <h5 class="m-b-0"><a class="collapsed" data-toggle="collapse" data-parent="#accordionExampleTwo" href="#collapseTwoComplex" aria-expanded="false" aria-controls="collapseTwoComplex">Proof of employment:<strong> Qantas Loyalty</strong><i class="icon-add-circle"></i></a></h5>
+                        </div>
+                        <div class="collapse" id="collapseTwoComplex" role="tabpanel" aria-labelledby="headingTwoComplex">
+                          <div class="card-block">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven&apos;t heard of them accusamus labore sustainable VHS.</div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header" id="headingThreeComplex" role="tab">
+                          <h5 class="m-b-0"><a class="collapsed" data-toggle="collapse" data-parent="#accordionExampleTwo" href="#collapseThreeComplex" aria-expanded="false" aria-controls="collapseThreeComplex">Proof of employment:<strong> Qantas Loyalty</strong><i class="icon-add-circle"></i></a></h5>
+                        </div>
+                        <div class="collapse" id="collapseThreeComplex" role="tabpanel" aria-labelledby="headingThreeComplex">
+                          <div class="card-block">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven&apos;t heard of them accusamus labore sustainable VHS.</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </section>
+          <h1 class="category-head" id="tabs">Tabs</h1>
+          <section class="row">
+            <article class="col-sm-4">
+              <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <h4 class="no-top-margin-xs">Basic example</h4>
+                </div>
+              </div>
+            </article>
+            <article class="col-sm-8">
+              <div>
+                <div class="code-source-wrapper">
+                  <div class="module">
+                    <!-- Nav tabs-->
+                    <ul class="nav nav-tabs" role="tablist">
+                      <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#home" role="tab">Home</a></li>
+                      <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#profile" role="tab">Profile</a></li>
+                      <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#messages" role="tab">Messages</a></li>
+                      <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#settings" role="tab">Settings</a></li>
+                    </ul>
+                    <!-- Tab panes-->
+                    <div class="tab-content bg-faded">
+                      <div class="tab-pane fade in active p-a-2" id="home" role="tabpanel">Home content</div>
+                      <div class="tab-pane fade p-a-2" id="profile" role="tabpanel">Profile content</div>
+                      <div class="tab-pane fade p-a-2" id="messages" role="tabpanel">Messages content</div>
+                      <div class="tab-pane fade p-a-2" id="settings" role="tabpanel">Settings content</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </section>
+          <h1 class="category-head" id="cards">Cards</h1>
+          <section class="row">
+            <article class="col-sm-4">
+              <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <h4 class="no-top-margin-xs">Basic example</h4>
+                  <p class="elegant top-margin3-xs">
+                    <!--| Cards require a small amount of markup and classes to provide you with as much control as possible. These classes and markup are flexible though and can typically be remixed and extended with ease. For example, if your card has no flush content like images, feel free to put the .card-block class on the .card element to consolidate your markup.-->
+                  </p>
+                </div>
+              </div>
+            </article>
+            <article class="col-sm-8">
+              <div>
+                <div class="code-source-wrapper">
+                  <div class="module bd-example">
+                    <div class="card"><img class="card-img-top" src="img/thumb-card.svg" alt="Card image cap">
+                      <div class="card-block">
+                        <h2 class="card-title">Card title</h2>
+                      </div>
+                      <div class="card-footer"><a class="btn btn-link btn-block" href="#">Card action</a></div>
+                      <!--.card-footer-->
+                      <!--    a.btn.btn-link.btn-block(href='#') Card action-->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </section>
+          <section class="row">
+            <article class="col-sm-4">
+              <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <h4 class="no-top-margin-xs">Content options</h4>
+                  <p class="elegant top-margin3-xs">
+                    <!--| Cards require a small amount of markup and classes to provide you with as much control as possible. These classes and markup are flexible though and can typically be remixed and extended with ease. For example, if your card has no flush content like images, feel free to put the .card-block class on the .card element to consolidate your markup.-->
+                  </p>
+                </div>
+              </div>
+            </article>
+            <article class="col-sm-8">
+              <div>
+                <div class="code-source-wrapper">
+                  <div class="module bd-example">
+                    <div class="card">
+                      <div class="callout-badge">Call out</div><img class="card-img-top" src="img/thumb-card.svg" alt="Card image cap">
+                      <div class="card-block">
+                        <h2 class="card-title">Card title</h2>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the cards content.</p>
+                        <div class="price-lockup">
+                          <div class="markdown">was
+                            <s>37,850</s>
+                          </div>
+                          <div class="price"><sup>pts</sup>32,170</div>
+                          <div class="add-on">avg. per bottle</div>
+                          <div class="add-on">$250 per case of 6 or 25,000 points</div>
+                        </div>
+                      </div>
+                      <div class="card-footer"><a class="btn btn-link btn-block" href="#">Card action</a></div>
+                      <div class="card-footer"><a class="btn btn-link btn-block btn-terms-condition" href="#">Terms Condtions</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </section>
+          <h1 class="category-head" id="stepNav">Step navigation</h1>
+          <section class="row">
+            <article class="col-sm-4">
+              <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <h4 class="no-top-margin-xs">Basic example</h4>
+                </div>
+              </div>
+            </article>
+            <article class="col-sm-8">
+              <div>
+                <div class="code-source-wrapper">
+                  <div class="module">
+                    <div class="row">
+                      <div class="col-xs-6">
+                        <ol class="nav multi-steps">
+                          <li class="nav-item current">
+                            <div class="section-title">Personal details</div>
+                            <ul class="section-steps">
+                              <li class="complete">About you</li>
+                              <li class="complete">Contact details</li>
+                              <li class="current">Address</li>
+                              <li class="incomplete">Living situation</li>
+                              <li class="incomplete">Your ID and security</li>
+                            </ul>
+                          </li>
+                          <li class="nav-item incomplete">
+                            <div class="section-title">Financial details</div>
+                          </li>
+                          <li class="nav-item incomplete">
+                            <div class="section-title">Card preferences</div>
+                          </li>
+                          <li class="nav-item incomplete">
+                            <div class="section-title">Next steps</div>
+                          </li>
+                        </ol>
+                      </div>
+                      <div class="col-xs-6">
+                        <ol class="nav multi-steps">
+                          <li class="nav-item complete">
+                            <div class="section-title">Personal details</div>
+                          </li>
+                          <li class="nav-item current">
+                            <div class="section-title">Financial details</div>
+                            <ul class="section-steps">
+                              <li class="current">Income</li>
+                              <li class="incomplete">Employment</li>
+                              <li class="incomplete">Expenses</li>
+                              <li class="incomplete">Financial commitments</li>
+                            </ul>
+                          </li>
+                          <li class="nav-item incomplete">
+                            <div class="section-title">Card preferences</div>
+                          </li>
+                          <li class="nav-item incomplete">
+                            <div class="section-title">Next steps</div>
+                          </li>
+                        </ol>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </section>
+          <h1 class="category-head" id="QMoneyHeader">Qantas Money header</h1>
+          <section class="row">
+            <article class="col-xs-12">
+              <div class="module module-raised">
+                <header class="qmoney-header example">
+                  <div class="progress hidden-xs-down">
+                    <div class="progress-bar w-75" role="progressbar" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100" style="width: 33%;"></div>
+                  </div>
+                  <button class="qmoney-openMenu hidden-sm-up menu-button">
+                    <div class="icon-menu"></div>
+                  </button><a class="brand brand-qmoney" href="/" role="logo">Qantas Money</a>
+                  <div class="reference-num hidden-xs-down"><i class="icon-application"></i><span class="label"><strong>Application ref:</strong> 12345678</span></div>
+                </header>
+              </div>
+            </article>
+          </section>
+          <h1 class="category-head" id="needHelpCallout">Need Help Callout</h1>
+          <section class="row">
+            <article class="col-xs-12">
+              <div class="module module-raised"><a class="callout-need-help" href="tel:13001233456">
+                  <div class="icon-holder icon-holder-sm btn btn-outline-primary"><i class="icon-call"></i></div>
+                  <p class="m-t-1"><strong>Need help?<br>Call 1300 123 3456</strong> anytime 24<br>hours a day, 7 days a week</p></a></div>
+            </article>
+          </section>
+          <h1 class="category-head" id="pageActions">Page Actions</h1>
+          <section class="row">
+            <article class="col-xs-12">
+              <div class="module module-raised">
+                <nav class="page-actions"><a class="link link-back" href="#"><i class="icon-chevron-left"></i>Back to section link</a><a class="link link-save-exit" href="#">Save and exit<i class="icon-exit-to-app"></i></a></nav>
+              </div>
+            </article>
+          </section>
+          <h1 class="category-head" id="contentPanel">Content Panel</h1>
+          <section class="row">
+            <article class="col-xs-12">
+              <div class="content-panel card">
+                <h2>About you</h2>
+                <p>Please enter your name exactly as it appears on your ID documents.</p>
+              </div>
+            </article>
+          </section>
+          <h1 class="category-head" id="checkingInfoBenefits">Checking information benefits</h1>
+          <section class="row">
+            <article class="col-xs-12">
+              <div class="checking-information-benefits row m-t-3 m-b-3">
+                <div class="col-xs-12 col-md-4 checking-information-benefits--item text-xs-center">
+                  <div class="card card-inverse card-primary checking-information-benefits--symbol-1 d-flex flex-items-xs-center flex-items-xs-middle"><i class="icon-qantas-points"></i></div><strong>Earn 50,000 bonus Qantas Points</strong>
+                </div>
+                <div class="col-xs-12 col-md-4 checking-information-benefits--item text-xs-center">
+                  <div class="card card-inverse card-primary checking-information-benefits--symbol-2 d-flex flex-items-xs-center flex-items-xs-middle">$</div><strong>Receive Qantas lounge passes</strong>
+                </div>
+                <div class="col-xs-12 col-md-4 checking-information-benefits--item text-xs-center">
+                  <div class="card card-inverse card-primary checking-information-benefits--symbol-3 d-flex flex-items-xs-center flex-items-xs-middle">0%</div><strong>Pay 0% p.a. on balance transfers for 14 months</strong>
+                </div>
+              </div>
+            </article>
+          </section>
+          <h1 class="category-head" id="spinner">Spinner</h1>
+          <section class="row">
+            <article class="col-xs-12">
+              <div class="module">
+                <div class="spinner"></div>
+              </div>
+            </article>
+          </section>
+          <h1 class="category-head" id="Tables">Tables</h1>
+          <section class="row">
+            <div class="col-sm-2">
+              <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <h4 class="no-top-margin-xs">Table style (Jupiter version)</h4>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-10">
+              <div class="code-source-wrapper">
+                <div class="module">
+                  <table class="table table-striped table-hover">
+                    <caption class="hidden-xs-up">Table caption this table width is:</caption>
+                    <thead>
+                      <tr>
+                        <th>Date</th>
+                        <th>Description</th>
+                        <th class="text-xs-right">Qantas Points</th>
+                        <th class="text-xs-right">Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Tue 3 May 2016</td>
+                        <td>Qantas & Jetstar any seat award 1 adt ref 5P5FJT</td>
+                        <td class="text-xs-right">- 10,000</td>
+                        <td class="text-xs-right">0</td>
+                      </tr>
+                      <tr>
+                        <td class="strong">Sun 1 May 2016</td>
+                        <td class="strong">Opening balance for May</td>
+                        <td class="strong text-xs-right">100,010,000</td>
+                        <td class="strong text-xs-right">-</td>
+                      </tr>
+                      <tr>
+                        <td class="strong">Sat 20 Apr 2016</td>
+                        <td class="strong">Closing balance for April</td>
+                        <td class="strong text-xs-right">100,010,000</td>
+                        <td class="strong text-xs-right">-</td>
+                      </tr>
+                      <tr>
+                        <td>Thu 28 Apr 2016</td>
+                        <td>Avis AU cars rdmptn red-51B497 28APR16</td>
+                        <td class="text-xs-right">-10,000</td>
+                        <td class="text-xs-right">0</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="row">
+            <div class="col-sm-2">
+              <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <h4 class="no-top-margin-xs">Table style - Grey (Default)</h4>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-10">
+              <div class="code-source-wrapper">
+                <div class="module">
+                  <table class="table table-hover table-grey">
+                    <caption class="hidden-xs-up">Table caption</caption>
+                    <thead>
+                      <tr>
+                        <th width="25%">Column heading</th>
+                        <th width="25%">Column heading</th>
+                        <th width="25%">Column heading</th>
+                        <th width="25%">Column heading</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Value</td>
+                        <td>Value</td>
+                        <td>Value</td>
+                        <td>Value</td>
+                      </tr>
+                      <tr>
+                        <td>Value</td>
+                        <td>Value</td>
+                        <td>Value</td>
+                        <td>Value</td>
+                      </tr>
+                      <tr>
+                        <td>Value</td>
+                        <td>Value</td>
+                        <td>Value</td>
+                        <td>Value</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="row">
+            <div class="col-sm-2">
+              <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <h4 class="no-top-margin-xs">Table style - Bay Blue</h4>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-10">
+              <div class="code-source-wrapper">
+                <div class="module">
+                  <table class="table table-hover table-bay-blue">
+                    <caption class="hidden-xs-up">Table caption</caption>
+                    <thead>
+                      <tr>
+                        <th width="25%">Column heading</th>
+                        <th width="25%">Column heading</th>
+                        <th width="25%">Column heading</th>
+                        <th width="25%">Column heading</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Value</td>
+                        <td>Value</td>
+                        <td>Value</td>
+                        <td>Value</td>
+                      </tr>
+                      <tr>
+                        <td>Value</td>
+                        <td>Value</td>
+                        <td>Value</td>
+                        <td>Value</td>
+                      </tr>
+                      <tr>
+                        <td>Value</td>
+                        <td>Value</td>
+                        <td>Value</td>
+                        <td>Value</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="row">
+            <div class="col-sm-2">
+              <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <h4 class="no-top-margin-xs">Table style - Charcoal</h4>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-10">
+              <div class="code-source-wrapper">
+                <div class="module">
+                  <table class="table table-hover table-charcoal">
+                    <caption class="hidden-xs-up">Table caption</caption>
+                    <thead>
+                      <tr>
+                        <th width="25%">Column heading</th>
+                        <th width="25%">Column heading</th>
+                        <th width="25%">Column heading</th>
+                        <th width="25%">Column heading</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Value</td>
+                        <td>Value</td>
+                        <td>Value</td>
+                        <td>Value</td>
+                      </tr>
+                      <tr>
+                        <td>Value</td>
+                        <td>Value</td>
+                        <td>Value</td>
+                        <td>Value</td>
+                      </tr>
+                      <tr>
+                        <td>Value</td>
+                        <td>Value</td>
+                        <td>Value</td>
+                        <td>Value</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="row">
+            <div class="col-sm-2">
+              <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <h4 class="no-top-margin-xs">Table style - Sand</h4>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-10">
+              <div class="code-source-wrapper">
+                <div class="module">
+                  <table class="table table-hover table-sand">
+                    <caption class="hidden-xs-up">Table caption</caption>
+                    <thead>
+                      <tr>
+                        <th width="25%">Column heading</th>
+                        <th width="25%">Column heading</th>
+                        <th width="25%">Column heading</th>
+                        <th width="25%">Column heading</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Value</td>
+                        <td>Value</td>
+                        <td>Value</td>
+                        <td>Value</td>
+                      </tr>
+                      <tr>
+                        <td>Value</td>
+                        <td>Value</td>
+                        <td>Value</td>
+                        <td>Value</td>
+                      </tr>
+                      <tr>
+                        <td>Value</td>
+                        <td>Value</td>
+                        <td>Value</td>
+                        <td>Value</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="row">
+            <div class="col-sm-2">
+              <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <h4 class="no-top-margin-xs">Table - Bay Blue</h4>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-10">
+              <div class="code-source-wrapper">
+                <div class="module">
+                  <table class="table table-hover table-bay-blue">
+                    <tbody>
+                      <tr>
+                        <th scope="row" width="30%">Income before tax</th>
+                        <td width="60%">$120,000/year</td>
+                        <td class="no-l-border" width="10%"><a class="link link-default pull-xs-right" href="#">Edit</a></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Additional income</th>
+                        <td>$500/fortnight</td>
+                        <td class="no-l-border"><a class="link link-default pull-xs-right" href="#">Edit</a></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Future income change</th>
+                        <td>-$100/week</td>
+                        <td class="no-l-border"><a class="link link-default pull-xs-right" href="#">Edit</a></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Employment</th>
+                        <td>Full time</td>
+                        <td class="no-l-border"><a class="link link-default pull-xs-right" href="#">Edit</a></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Industry</th>
+                        <td>Advertising, Media, Entertainment</td>
+                        <td class="no-l-border"><a class="link link-default pull-xs-right" href="#">Edit</a></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Occupation</th>
+                        <td>Engineering and Building Associates</td>
+                        <td class="no-l-border"><a class="link link-default pull-xs-right" href="#">Edit</a></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Employer details</th>
+                        <td>Qantas Loyalty<br>10 Bourke Road, MASCOT NSW 2020<br>0411 222 333</td>
+                        <td class="no-l-border"><a class="link link-default pull-xs-right" href="#">Edit</a></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Time at current employer</th>
+                        <td>3 years, 5 months</td>
+                        <td class="no-l-border"><a class="link link-default pull-xs-right" href="#">Edit</a></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Living expenses</th>
+                        <td>$3,000/month</td>
+                        <td class="no-l-border"><a class="link link-default pull-xs-right" href="#">Edit</a></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Credit cards</th>
+                        <td>$10,000 outstanding balance</td>
+                        <td class="no-l-border"><a class="link link-default pull-xs-right" href="#">Edit</a></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Loans</th>
+                        <td>$520,800 outstanding balance</td>
+                        <td class="no-l-border"><a class="link link-default pull-xs-right" href="#">Edit</a></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Loan repayments</th>
+                        <td>$1,800/month</td>
+                        <td class="no-l-border"><a class="link link-default pull-xs-right" href="#">Edit</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </section>
+          <h1 class="category-head" id="contentElements">Content Elements</h1>
+          <section class="row">
+            <article class="col-sm-3">
+              <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <h4 class="no-top-margin-xs">Benefit widget</h4>
+                </div>
+              </div>
+            </article>
+            <article class="col-sm-9">
+              <div>
+                <div class="code-source-wrapper">
+                  <div class="module p-a-3">
+                    <div class="col-sm-12">
+                      <div class="benefit">
+                        <p>
+                          Get the
+                          &nbsp;<a href="http://www.qantas.com/au/en/flight-deals.html/all/au/economy/all/lowest">latest specials</a>
+                          &nbsp;
+                          and
+                          &nbsp;<a href="http://www.qantas.com/au/en/promotions.html">great offers</a>
+                          &nbsp;
+                          from Qantas
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </section>
+          <section class="row">
+            <article class="col-sm-3">
+              <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <h4 class="no-top-margin-xs">Signup widget</h4>
+                </div>
+              </div>
+            </article>
+            <article class="col-sm-9">
+              <div>
+                <div class="code-source-wrapper">
+                  <div class="module p-a-3">
+                    <div class="col-sm-12 text-xs-center">
+                      <div class="icon-holder icon-holder-lg btn btn-primary m-x-auto"><i class="icon-mail"></i></div>
+                      <h3 class="m-t-2 m-b-2">Red Email</h3>
+                      <p class="text-xs-center">With Red Email you can get the latest flights, hotels and cruise specials straight to your inbox.</p><a class="btn btn-outline-primary btn-block m-x-auto col-sm-3" href="#">Subscribe</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </section>
+          <section class="row">
+            <article class="col-sm-3">
+              <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <h4 class="no-top-margin-xs">Cross sell</h4>
+                </div>
+              </div>
+            </article>
+            <article class="col-sm-9">
+              <div>
+                <div class="code-source-wrapper">
+                  <div class="module">
+                    <div class="row">
+                      <div class="col-xs-12 col-sm-4">
+                        <div class="text-and-image text-and-image--above"><a class="text-and-image__link" href="/au/en/book-a-trip/hotels-and-airbnb.html">Hotels and Airbnb</a>
+                          <picture>
+                            <source srcset="img/promobanner.desktop-lg.jpg" media="(min-width: 48em)">
+                            <source srcset="img/promobanner.tablet-small.jpg" media="(min-width: 37.5em)">
+                            <source srcset="img/promobanner.mobile.jpg" media="(min-width: 25em)"><img srcset="img/promobanner.mobile-small.jpg" alt="">
+                          </picture>
+                          <div class="text-and-image__text">
+                            <h2>Hotels and Airbnb</h2>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xs-12 col-sm-4">
+                        <div class="text-and-image text-and-image--above"><a class="text-and-image__link" href="/au/en/book-a-trip/hotels-and-airbnb.html">Hotels and Airbnb</a>
+                          <picture>
+                            <source srcset="img/promobanner.desktop-lg.jpg" media="(min-width: 48em)">
+                            <source srcset="img/promobanner.tablet-small.jpg" media="(min-width: 37.5em)">
+                            <source srcset="img/promobanner.mobile.jpg" media="(min-width: 25em)"><img srcset="img/promobanner.mobile-small.jpg" alt="">
+                          </picture>
+                          <div class="text-and-image__text">
+                            <h2>Hotels and Airbnb</h2>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xs-12 col-sm-4">
+                        <div class="text-and-image text-and-image--above"><a class="text-and-image__link" href="/au/en/book-a-trip/hotels-and-airbnb.html">Hotels and Airbnb</a>
+                          <picture>
+                            <source srcset="img/promobanner.desktop-lg.jpg" media="(min-width: 48em)">
+                            <source srcset="img/promobanner.tablet-small.jpg" media="(min-width: 37.5em)">
+                            <source srcset="img/promobanner.mobile.jpg" media="(min-width: 25em)"><img srcset="img/promobanner.mobile-small.jpg" alt="">
+                          </picture>
+                          <div class="text-and-image__text">
+                            <h2>Hotels and Airbnb</h2>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </section>
+          <section class="row">
+            <article class="col-sm-3">
+              <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <h4 class="no-top-margin-xs">Article - 12 columns</h4>
+                </div>
+              </div>
+            </article>
+            <article class="col-sm-9">
+              <div>
+                <div class="code-source-wrapper">
+                  <div class="module">
+                    <div class="row article-layout">
+                      <div class="col-xs-12 col-sm-6">
+                        <div class="article-img-overlay"><a class="article-img-link" href="http://www.qantas.com/au/en/destinations/asia/indonesia/bali.html?int_cam=au:en:article:featured-destination-bali-feb17:en:nn">Explore Bali</a>
+                          <div class="article-ribbon"><span>Featured destination<span></span></span></div>
+                          <picture>
+                            <source srcset="img/article.mobile.jpg" media="(min-width: 48em)">
+                            <source srcset="img/article.tablet.small.jpg" media="(min-width: 37.5em)"><img srcset="img/article.mobile.jpg" alt="Bali sunset">
+                          </picture>
+                        </div>
+                      </div>
+                      <div class="col-xs-12 col-sm-6">
+                        <div class="article-content">
+                          <h3>Bali, Indonesia</h3>
+                          <p>With close proximity to Australia, Bali has always been a favourite for Australian travellers. Situated on a small island, Bali is known for its volcanic mountains, iconic rice paddies, beaches and coral reefs. &nbsp;<br></p>
+                          <p>Enjoy spectacular cliff top resorts and sophisticated eateries in Uluwatu and Seminyak, while Bali beaches like Kuta and Legian stay true to their promise of unbeatable value. Outside of the main area&apos;s, discover quiet fishing villages and lush mountain villages surrounded by rice paddies.</p><a class="link link-internal" href="#">Explore Bali<i class="icon-arrow-right"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </section>
+          <section class="row">
+            <article class="col-sm-3">
+              <div class="row">
+                <div class="col-xs-12 col-sm-10">
+                  <h4 class="no-top-margin-xs">Article - 3 columns</h4>
+                </div>
+              </div>
+            </article>
+            <article class="col-sm-9">
+              <div>
+                <div class="code-source-wrapper">
+                  <div class="module">
+                    <div class="row article-layout">
+                      <div class="col-xs-12 col-sm-4">
+                        <div class="row">
+                          <div class="col-xs-12">
+                            <div class="article-img-overlay"><a class="article-img-link" href="http://www.qantas.com/au/en/destinations/asia/indonesia/bali.html?int_cam=au:en:article:featured-destination-bali-feb17:en:nn">Explore Bali</a>
+                              <picture>
+                                <source srcset="img/article.mobile.jpg" media="(min-width: 48em)">
+                                <source srcset="img/article.tablet.small.jpg" media="(min-width: 37.5em)"><img srcset="img/article.mobile.jpg" alt="Bali sunset">
+                              </picture>
+                            </div>
+                          </div>
+                          <div class="col-xs-12">
+                            <div class="article-content">
+                              <h3>Hit the road and explore Australia</h3>
+                              <p>Drive away with our latest car hire offers. Enjoy upgrades, double points, free days and more with Budget, Hertz, Thrifty and Avis.</p><a class="link link-internal" href="#">View car hire specials<i class="icon-arrow-right"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xs-12 col-sm-4">
+                        <div class="row">
+                          <div class="col-xs-12">
+                            <div class="article-img-overlay"><a class="article-img-link" href="http://www.qantas.com/au/en/destinations/asia/indonesia/bali.html?int_cam=au:en:article:featured-destination-bali-feb17:en:nn">Explore Bali</a>
+                              <picture>
+                                <source srcset="img/article.mobile.jpg" media="(min-width: 48em)">
+                                <source srcset="img/article.tablet.small.jpg" media="(min-width: 37.5em)"><img srcset="img/article.mobile.jpg" alt="Bali sunset">
+                              </picture>
+                            </div>
+                          </div>
+                          <div class="col-xs-12">
+                            <div class="article-content">
+                              <h3>Hit the road and explore Australia</h3>
+                              <p>Drive away with our latest car hire offers. Enjoy upgrades, double points, free days and more with Budget, Hertz, Thrifty and Avis.</p><a class="link link-internal" href="#">View car hire specials<i class="icon-arrow-right"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xs-12 col-sm-4">
+                        <div class="row">
+                          <div class="col-xs-12">
+                            <div class="article-img-overlay"><a class="article-img-link" href="http://www.qantas.com/au/en/destinations/asia/indonesia/bali.html?int_cam=au:en:article:featured-destination-bali-feb17:en:nn">Explore Bali</a>
+                              <picture>
+                                <source srcset="img/article.mobile.jpg" media="(min-width: 48em)">
+                                <source srcset="img/article.tablet.small.jpg" media="(min-width: 37.5em)"><img srcset="img/article.mobile.jpg" alt="Bali sunset">
+                              </picture>
+                            </div>
+                          </div>
+                          <div class="col-xs-12">
+                            <div class="article-content">
+                              <h3>Hit the road and explore Australia</h3>
+                              <p>Drive away with our latest car hire offers. Enjoy upgrades, double points, free days and more with Budget, Hertz, Thrifty and Avis.</p><a class="link link-internal" href="#">View car hire specials<i class="icon-arrow-right"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </section>
+        </div>
+      </main>
+    </div>
+    <!--
+    Bootstrap core JavaScript
+    ==================================================
+    -->
+    <!-- Placed at the end of the document so the pages load faster-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/tether.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/ui-main.js"></script>
+  </body>
+</html>

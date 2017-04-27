@@ -1,0 +1,42 @@
+.login-menu
+    .row-inner(data-reactroot='')
+        .login-widget.login-widget--default
+            h4.login-widget__heading
+                a.login-widget__link(href='https://www.qantas.com/travel/airlines/business-direct-login/global/en') Business Direct login
+            h4.login-widget__heading.brLogin
+                a.login-widget__link.external-link(target='_blank', href='https://www.qantasbusinessrewards.com/login') Business Rewards login
+            h4.login-widget__heading.login-widget__heading--last-child Frequent Flyer login
+            div(data-habitat='C1')
+                .LSLLoginForm-container(data-reactroot='', name='LSLLoginForm-container')
+                    form.ql-login-widget.ql-login-grey-bg(autocomplete='off', method='post', name='LSLLoginForm')
+                        .ql-login-row
+                            .ql-login-column
+                                label.ql-login-widget__label(for='form-member-id') Membership number
+                                input.form-input.form-control(type='text', aria-label='Membership Number', autocomplete='off', maxlength='14', name='memberId', value='1926397793')
+                                // react-empty: 17
+                        .ql-login-row
+                            .ql-login-column
+                                label.ql-login-widget__label(for='form-member-surname') Last name
+                                input.form-input.form-control(type='text', aria-label='Last name', autocomplete='off', maxlength='37', name='lastName', value='SPANO ')
+                                // react-empty: 22
+                        .ql-login-row
+                            .ql-login-column.ql-login-pin-row
+                                .ql-login-row
+                                    label.ql-login-widget__label(for='form-member-pin') PIN
+                                    label.widget-form__label.pull-xs-right(for='form-member-pin')
+                                        a.ql-login-link(href='https://www.qantas.com.au/fflyer/dyns/fpin') Forgot PIN?
+                                input.form-input.form-control(type='password', aria-label='PIN Number', autocomplete='off', maxlength='4', name='memberPin', value='')
+                                // react-empty: 32
+                        .ql-login-row
+                            .ql-login-column
+                                label.custom-control.custom-checkbox
+                                    input.custom-control-input(type='checkbox', checked)
+                                    span.custom-control-indicator
+                                    span.custom-control-description Selected
+                        .ql-login-row
+                            .ql-login-column
+                                button.btn.btn-primary.btn-block(type='submit') Log in
+                        .ql-login-row
+                            .ql-login-column
+                                a.link.link-internal(href='#') Normal
+                                    i.icon-arrow-right

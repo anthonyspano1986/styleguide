@@ -1,0 +1,402 @@
+// Base class
+//
+// Kickstart any navigation component with a set of style resets. Works with
+// `<nav>`s or `<ul>`s.
+
+.nav {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.nav-link {
+  display: inline-block;
+
+  @include hover-focus {
+    text-decoration: none;
+  }
+
+  // Disabled state lightens text and removes hover/tab effects
+  &.disabled {
+    color: $nav-disabled-link-color;
+
+    @include plain-hover-focus {
+      color: $nav-disabled-link-hover-color;
+      cursor: $cursor-disabled;
+      background-color: $nav-disabled-link-hover-bg;
+    }
+  }
+}
+
+// Nav inline
+
+.nav-inline {
+  .nav-item {
+    display: inline-block;
+  }
+
+  .nav-item + .nav-item,
+  .nav-link + .nav-link {
+    margin-left: $nav-item-inline-spacer;
+  }
+}
+
+//
+// Tabs
+//
+
+.nav-tabs {
+  border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
+  @include clearfix();
+  display: flex;
+
+  .nav-item {
+    //float: left;
+    flex: 25% 0 0;
+    // Make the list-items overlay the bottom border
+    margin-bottom: -$nav-tabs-border-width;
+  }
+
+  .nav-link {
+    display: block;
+    padding: $nav-link-padding;
+    border-top: $nav-tabs-border-width solid #DADADA;
+    @include border-top-radius($nav-tabs-border-radius);
+    font-size: 1.25rem;
+    text-align: center;
+    color: $qantas-charcoal;
+
+    > span, > [class^="icon-"] {
+      vertical-align: middle;
+    }
+    > [class^="icon-"] {
+      margin-right: .875rem;
+    }
+
+    @include hover-focus {
+      border-color: $nav-tabs-link-hover-border-color $nav-tabs-link-hover-border-color $nav-tabs-border-color;
+      border-top: $nav-tabs-border-width solid #DADADA !important;
+    }
+
+    &.disabled {
+      @include plain-hover-focus {
+        color: $nav-disabled-link-color;
+        background-color: transparent;
+        border-color: transparent;
+      }
+    }
+  }
+
+  .nav-link.active,
+  .nav-item.open .nav-link {
+    @include plain-hover-focus {
+      color: $nav-tabs-active-link-hover-color;
+      background-color: $nav-tabs-active-link-hover-bg;
+      border-color: $nav-tabs-active-link-hover-border-color $nav-tabs-active-link-hover-border-color transparent;
+      border-top: $nav-tabs-border-width solid transparent !important;
+      box-shadow: inset 0 4px $qantas-red;
+      font-family: $font-family-bold;
+    }
+  }
+
+  .dropdown-menu {
+    // Make dropdown border overlap tab border
+    margin-top: -$nav-tabs-border-width;
+    // Remove the top rounded corners here since there is a hard edge above the menu
+    @include border-top-radius(0);
+  }
+
+  &.nav-tabs-dark {
+    border-bottom: none;
+    .nav-link {
+      border: none !important;
+      border-color: transparent;
+      color: $qantas-white;
+      background-color: rgba($qantas-charcoal, 0.7);
+      font-size: 1.125rem;
+
+      @include hover-focus {
+        box-shadow: inset 0 4px $qantas-red;
+        border-top: 0px solid transparent !important;
+        background-color: $qantas-charcoal;
+      }
+
+      &.disabled {
+        @include plain-hover-focus {
+          color: $nav-disabled-link-color;
+          background-color: transparent;
+          border-color: transparent;
+        }
+      }
+    }
+
+    .nav-link.active,
+    .nav-item.open .nav-link {
+      @include plain-hover-focus {
+        color: $qantas-white;
+        background-color: $qantas-charcoal;
+        border-color: transparent;
+        box-shadow: inset 0px 4px $qantas-red;
+      }
+    }
+  }
+}
+
+//
+// Pills
+//
+
+.nav-pills {
+  @include clearfix();
+
+  .nav-item {
+    float: left;
+
+    + .nav-item {
+      margin-left: $nav-item-margin;
+    }
+  }
+
+  .nav-link {
+    display: block;
+    padding: $nav-link-padding;
+    @include border-radius($nav-pills-border-radius);
+  }
+
+  .nav-link.active,
+  .nav-item.open .nav-link {
+    @include plain-hover-focus {
+      color: $nav-pills-active-link-color;
+      cursor: default;
+      background-color: $nav-pills-active-link-bg;
+    }
+  }
+}
+
+.nav-stacked {
+  .nav-item {
+    display: block;
+    float: none;
+
+    + .nav-item {
+      margin-top: $nav-item-margin;
+      margin-left: 0;
+    }
+  }
+}
+
+.nav-sibling {
+  border-top: 2px solid $qantas-red;
+  .nav-link {
+    padding: .75rem 0rem;
+    color: $qantas-charcoal;
+    border-bottom: 1px solid #CCCCCC;
+    &:hover {
+      text-decoration: none;
+    }
+    &.active {
+      background-color: $qantas-white;
+      color: $qantas-charcoal;
+      font-family: $font-family-bold;
+      &:hover {
+        color: $qantas-charcoal;
+        background-color: $qantas-white;
+      }
+    }
+    &:after {
+      content: "\76";
+      font-family: qantas-components;
+      margin-left: .5rem;
+      float: right;
+      color: $qantas-red;
+    }
+  }
+}
+
+//
+// Tabbable tabs
+//
+
+// Hide tabbable panes to start, show them when `.active`
+.tab-content {
+  > .tab-pane {
+    display: none;
+
+  }
+  > .active {
+    display: block;
+  }
+}
+
+// Step navigation
+
+.multi-steps {
+  list-style-type: none;
+  padding-left: 0;
+  border-left: 2px solid $gray-light;
+  margin-left: 1rem;
+
+  // Default
+  > .nav-item {
+    padding-bottom: 1rem;
+    counter-increment: steps;
+    padding-left: 0;
+    cursor: pointer;
+
+    .section-title {
+      display: inline-block;
+      font-size: 1.25rem;
+      position: relative;
+      top: .125rem;
+      font-family: $font-family-bold;
+    }
+
+    &:last-child {
+      padding-bottom: 0 !important;
+    }
+
+    &:not(.current) {
+      padding-bottom: 1.25rem;
+    }
+
+    &.incomplete {
+      color: $gray-light;
+      &:before {
+        color: $gray-light;
+        border: 2px solid $gray-light;
+      }
+    }
+
+    // Complete item
+    &.complete {
+      color: $qantas-success;
+      position: relative;
+      left: -2px;
+      border-left: 2px solid $qantas-success;
+      &:before {
+        border: 2px solid $qantas-success;
+        color: $qantas-white;
+        background-color: $qantas-success;
+        content: '\69';
+        font-family: qantas-components;
+        font-size: 1.5rem;
+        line-height: 1.75rem;
+        vertical-align: middle;
+      }
+    }
+
+    // Current item
+    &.current {
+      color: $qantas-charcoal;
+      position: relative;
+      left: -2px;
+      border-left: 2px solid $qantas-red;
+      &:before {
+        border: 2px solid $qantas-red;
+        color: $qantas-red;
+      }
+    }
+
+    &:before {
+      border-radius: 50%;
+      @include size(33px, 33px);
+      background-color: $qantas-white;
+      display: inline-block;
+      border: 2px solid $qantas-charcoal;
+      text-align: center;
+      line-height: 33px;
+      margin-right: .5rem;
+      content: counter(steps);
+      margin-left: -1.125rem;
+      font-family: $font-family-bold;
+      font-size: 1.125rem;
+    }
+  }
+
+  .section-steps {
+    list-style-type: none;
+    padding-left: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    li {
+      margin-bottom: .75rem;
+      font-size: 1rem;
+      position: relative;
+      color: $qantas-charcoal;
+      line-height: 1rem;
+      max-width: 13rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &.complete {
+        color: $qantas-red;
+        font-family: $font-family-bold;
+        &:before {
+          content: '\69';
+          font-family: qantas-components;
+          position: absolute;
+          right: .25rem;
+          font-size: 1.5rem;
+        }
+      }
+      &.current {
+        color: $qantas-charcoal;
+        font-family: $font-family-bold;
+        background-color: $qantas-white;
+        padding: 0 1.25rem;
+        text-indent: -4px;
+        &:before {
+          content: "\6e";
+          font-family: qantas-components;
+          position: absolute;
+          right: .25rem;
+          top: 0rem;
+          font-size: 1.5rem;
+        }
+      }
+      &.incomplete {
+        color: $gray-light;
+      }
+    }
+  }
+}
+
+.nav-dark {
+  .link {
+    color: $qantas-white;
+  }
+  .nav-link {
+    color: $qantas-white;
+    &:hover {
+      border-bottom: 3px solid $qantas-red;
+    }
+  }
+  .custom-control {
+    color: $qantas-white;
+  }
+}
+
+// Page actions
+.page-actions {
+  display: flex;
+  align-items: center;
+  height: 2rem;
+  justify-content: space-between;
+  max-width: 820px;
+  > .link {
+    font-size: 1rem;
+    &:last-child {
+      margin-left: auto;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .page-actions {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}

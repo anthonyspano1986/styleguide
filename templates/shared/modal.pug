@@ -1,0 +1,83 @@
+h1#modals.category-head Modals
+
+section.row
+    article.col-sm-4
+        .row
+            .col-xs-12.col-sm-10
+                h4.no-top-margin-xs Basic example with trigger
+    article.col-sm-8
+        div
+            .code-source-wrapper
+                button.btn.btn-primary.btn-block.col-xs-12.col-sm-6.pull-xs-left(type='button' data-toggle="modal" data-target="#exampleModal") Trigger modal
+
+                #exampleModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+                    .modal-dialog(role='document')
+                        .modal-content
+                            .modal-header
+                                button.close(type='button', data-dismiss='modal', aria-label='Close')
+                                    i.icon-close
+                                h2.modal-title Modal title
+                            .modal-body
+                                p Your changes have not been saved. Would you like to save them before leaving this page?
+                            .modal-footer
+                                button.btn.btn-secondary(type='button', data-dismiss='modal') Close
+                                button.btn.btn-primary(type='button') Save changes
+
+section.row
+    article.col-sm-4
+        .row
+            .col-xs-12.col-sm-10
+                h4.no-top-margin-xs Basic example
+    article.col-sm-8
+        div
+            .code-source-wrapper
+                .module
+                    .modal-backdrop
+                        .modal
+                            .modal-dialog(role='document')
+                                .modal-content
+                                    .modal-header
+                                        button.close(type='button', data-dismiss='modal', aria-label='Close')
+                                            i.icon-close
+                                        h2.modal-title Save your changes?
+                                    .modal-body
+                                        p Your changes have not been saved. Would you like to save them before leaving this page?
+                                        .form-group.hidden-xs-up
+                                            label.form-label(for='') Normal
+                                            input.form-input.form-control(type='text', placeholder="I'm a text input")
+                                        .form-group.hidden-xs-up
+                                            label.form-label(for='') Normal
+                                            input.form-input.form-control(type='text', placeholder="I'm a text input")
+                                    .modal-footer
+                                        button.btn.btn-primary.btn-block.col-xs-12.col-sm-6.pull-xs-left(type='button') Save
+section.row
+    article.col-sm-4
+        .row
+            .col-xs-12.col-sm-10
+                h4.no-top-margin-xs Form example
+    article.col-sm-8
+        div
+            .code-source-wrapper
+                .module
+                    .modal-backdrop
+                        .modal
+                            .modal-dialog(role='document')
+                                .modal-content
+                                    .modal-header
+                                        button.close(type='button', data-dismiss='modal', aria-label='Close')
+                                            i.icon-close
+                                        h2.modal-title Save your changes?
+                                    .modal-body
+                                        p Your changes have not been saved. Would you like to save them before leaving this page?
+                                        .form-group
+                                            label.form-label(for='defaultInputText') Normal
+                                            input.form-input.form-control(type='text', placeholder="I'm a text input")
+                                        .form-group
+                                            label.form-label(for='defaultInputText') Normal
+                                            input.form-input.form-control(type='text', placeholder="I'm a text input")
+                                    .modal-footer
+                                        .row.flex-items-xs-middle
+                                            .col-xs-6
+                                                button.btn.btn-primary.btn-block.pull-xs-left(type='button') Save
+                                            .col-xs-6
+                                                a.link.link-default.pull-xs-left(href='#') Optional link

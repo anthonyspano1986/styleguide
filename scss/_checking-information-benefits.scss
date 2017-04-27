@@ -1,0 +1,41 @@
+
+.checking-information-qantas-card {
+  margin: 0 auto;
+}
+
+.checking-information-benefits--item {
+
+  .card {
+    @include size(85px, 85px);
+    margin: 0 auto;
+    font-size: 3rem;
+    font-family: $font-family-bold;
+    line-height: 1;
+    margin-bottom: 1.25rem;
+  }
+  .checking-information-benefits--symbol-2 {
+    font-size: 4rem;
+    padding-top: .5rem;
+  }
+  strong {
+    font-size: 1.25rem;
+    line-height: 1.2;
+    display: block;
+  }
+  .icon-qantas-points {
+
+    &:before {
+      font-size: 3.5rem;
+      margin: 0;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .checking-information-benefits--item {
+    margin-bottom: 3rem;
+  }
+  strong {
+    font-size: 1rem;
+  }
+}

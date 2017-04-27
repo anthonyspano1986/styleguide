@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="user-scalable=yes, initial-scale=1, maximum-scale=2, minimum-scale=1, width=device-width, height=device-height">
+    <link rel="icon" href="path/to/favicon-16.png" sizes="16x16" type="image/png">
+    <link rel="icon" href="path/to/favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="path/to/favicon-48.png" sizes="48x48" type="image/png">
+    <link rel="icon" href="path/to/favicon-62.png" sizes="62x62" type="image/png">
+    <link rel="icon" href="path/to/favicon-192.png" sizes="192x192" type="image/png">
+    <!-- Add to homescreen for Safari on iOS-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="application-name" content="Qantas - Card Activation">
+    <meta name="apple-mobile-web-app-title" content="Qantas - Card Activation">
+    <!-- Tile icon for Win8 (144x144 + tile color)-->
+    <meta name="msapplication-TileImage" content="img/mobileicons/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#dd1916">
+    <!-- Color the status bar on mobile devices-->
+    <meta name="theme-color" content="#dd1916">
+    <!-- Disable tap highlight on IE-->
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- iPad non-retina portrait startup image-->
+    <link href="apple-touch-startup-image-portrait.png" media="(device-width: 768px) and (device-height: 1024px) and not (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" rel="apple-touch-startup-image">
+    <!-- iPad non-retina landscape startup image-->
+    <link href="apple-touch-startup-image-landscape.png" media="(device-width: 768px) and (device-height: 1024px) and not (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" rel="apple-touch-startup-image">
+    <!-- iPad retina portrait startup image-->
+    <link href="apple-touch-startup-image-portrait-retina.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" rel="apple-touch-startup-image">
+    <!-- iPad retina landscape startup image-->
+    <link href="apple-touch-startup-image-landscape-retina.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" rel="apple-touch-startup-image">
+    <!-- Tile icon for Win8 (144x144 + tile color)-->
+    <meta name="msapplication-TileImage" content="ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#000">
+    <!-- Facebook: https://developers.facebook.com/docs/sharing/webmasters#markup-->
+    <meta property="fb:app_id" content="123456789">
+    <meta property="og:url" content="https://example.com/page.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Content Title">
+    <meta property="og:image" content="https://example.com/image.jpg">
+    <meta property="og:description" content="Description Here">
+    <meta property="og:site_name" content="Site Name">
+    <meta property="og:locale" content="en_US">
+    <meta property="article:author" content="">
+    <!-- Twitter: https://dev.twitter.com/cards/getting-started-->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@site_account">
+    <meta name="twitter:creator" content="@individual_account">
+    <meta name="twitter:url" content="https://example.com/page.html">
+    <meta name="twitter:title" content="Content Title">
+    <meta name="twitter:description" content="Content description less than 200 characters">
+    <meta name="twitter:image" content="https://example.com/image.jpg">
+    <!-- Schema.org markup for Google+-->
+    <link href="https://plus.google.com/+YourPage" rel="publisher">
+    <meta itemprop="name" content="Content Title">
+    <meta itemprop="description" content="Content description less than 200 characters">
+    <meta itemprop="image" content="https://example.com/image.jpg">
+    <title>Qantas</title>
+    <!-- Bootstrap-->
+    <link href="css/bootstrap-flex.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/skiplinks.css" type="text/css">
+    <link rel="stylesheet" href="css/debug-wai-aria.css" type="text/css">
+  </head>
+  <body>
+    <ul class="skiplinks">
+      <li><a href="#pageheader">Jump to header</a></li>
+      <li><a href="#pagecontent">Jump to main content</a></li>
+      <li><a href="#pagefooter">Jump to footer</a></li>
+      <li><a href="#pagefooter">Jump to Qantas Accessibility Guide</a></li>
+    </ul>
+    <div class="wrapper">
+      <nav class="qmoney-sidebar" role="navigation">
+        <button class="menu-button qmoney-closeMenu hidden-md-up">
+          <div class="icon-menu"></div>
+        </button>
+        <div class="reference-num hidden-md-up"><span class="label"><strong>Application ref:</strong> 12345678</span></div>
+        <h3 class="m-b-2">Apply for a Qantas Premier credit card</h3>
+        <ol class="nav multi-steps">
+          <li class="nav-item current" tabindex="0">
+            <div class="section-title">Personal details</div>
+            <ul class="section-steps">
+              <li class="complete" tabindex="0">About you</li>
+              <li class="complete" tabindex="0">Contact details</li>
+              <li class="current" tabindex="0">Address</li>
+              <li class="incomplete" tabindex="0">Living situation</li>
+              <li class="incomplete" tabindex="0">Your ID and security</li>
+            </ul>
+          </li>
+          <li class="nav-item incomplete" tabindex="0">
+            <div class="section-title">Financial details</div>
+          </li>
+          <li class="nav-item incomplete" tabindex="0">
+            <div class="section-title">Card preferences</div>
+          </li>
+          <li class="nav-item incomplete" tabindex="0">
+            <div class="section-title">Next steps</div>
+          </li>
+        </ol><a class="callout-need-help" href="tel:13001233456">
+          <div class="icon-holder icon-holder-sm btn btn-outline-primary"><i class="icon-call"></i></div>
+          <p class="m-t-1 m-b-0"><strong>Need help?<br>Call 1300 123 3456</strong> anytime 24 hours<br> a day, 7 days a week</p></a>
+      </nav>
+      <header class="qmoney-header" id="pageheader" role="banner">
+        <div class="progress hidden-xs-down">
+          <div class="progress-bar w-75" role="progressbar" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100" style="width: 33%;"></div>
+        </div>
+        <button class="qmoney-openMenu hidden-md-up menu-button">
+          <div class="icon-menu"></div>
+        </button><a class="brand brand-qmoney" href="/" role="logo">Qantas Money</a>
+        <div class="reference-num hidden-xs-down"><i class="icon-application"></i><span class="label"><strong>Application ref:</strong> 12345678</span></div>
+      </header>
+      <main class="q-money-main-content" id="pagecontent" role="main">
+        <nav class="page-actions m-b-1" role="navigation"><a class="link link-back" href="#"><i class="icon-chevron-left"></i>Back to section link</a><a class="link link-save-exit hidden-xs-down" href="#">Save and exit<i class="icon-exit-to-app"></i></a></nav>
+        <div class="content-panel card">
+          <div class="row">
+            <div class="col-xs-12 col-lg-12">
+              <h2 class="m-b-1">Financial commitments</h2>
+            </div>
+          </div>
+          <!-- Form-->
+          <div class="row form-group">
+            <div class="col-xs-12 col-lg-12">
+              <label class="form-label d-block m-b-0">Do you have any credit cards?</label>
+              <label class="custom-control custom-radio">
+                <input class="custom-control-input" name="credit-cards" type="radio" id="credit_cards_yes" checked=""><span class="custom-control-indicator"></span><span class="custom-control-description">Yes</span>
+              </label>
+              <label class="custom-control custom-radio">
+                <input class="custom-control-input" name="credit-cards" type="radio" id="credit_cards_no"><span class="custom-control-indicator"></span><span class="custom-control-description">No</span>
+              </label>
+            </div>
+          </div>
+          <div class="row form-group">
+            <div class="col-xs-12 col-lg-4 mxs-b-1">
+              <label class="form-label" for="total_credit_limit">Total credit limit</label>
+              <input class="form-control" id="total_credit_limit" type="text" placeholder="$ 10,000">
+            </div>
+            <div class="col-xs-12 col-lg-4">
+              <label class="form-label text-nowrap" for="total_outstanding_balance">Total outstanding balance</label>
+              <input class="form-control" id="total_outstanding_balance" type="text" placeholder="$ 1,200">
+            </div>
+          </div>
+          <div class="row form-group">
+            <div class="col-xs-12 col-lg-12">
+              <label class="form-label d-block m-b-0">Do you have any home loans, personal loans, store cards or charge cards?</label>
+              <label class="custom-control custom-radio">
+                <input class="custom-control-input" name="other-loans" type="radio" id="other_loans_yes" checked=""><span class="custom-control-indicator"></span><span class="custom-control-description">Yes</span>
+              </label>
+              <label class="custom-control custom-radio">
+                <input class="custom-control-input" name="other-loans" type="radio" id="other_loans_no"><span class="custom-control-indicator"></span><span class="custom-control-description">No</span>
+              </label>
+            </div>
+          </div>
+          <div id="current-loans">
+            <ul class="current-loans-list list-unstyled m-b-2" aria-live="polite" aria-relevant="current loans">
+              <li>
+                <div class="row form-group">
+                  <div class="col-xs-12 col-lg-8">
+                    <label for="loan_type">Loan type</label>
+                    <select class="selectpicker" id="loan_type" data-style="btn-secondary" data-size="2">
+                      <option>Select</option>
+                      <option>Home loan</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row form-group">
+                  <div class="col-xs-12 col-lg-4 mxs-b-1">
+                    <label class="text-nowrap" for="outstanding_balance1">Outstanding balance</label>
+                    <input class="form-control" id="outstanding_balance1" type="text" placeholder="$ 520,800">
+                  </div>
+                  <div class="col-xs-12 col-lg-4 mxs-b-1">
+                    <label class="text-nowrap" for="repaymentsamount1">Repayments (your share only)</label>
+                    <input class="form-control" id="repaymentsamount1" type="text" placeholder="$ 1,800">
+                  </div>
+                  <div class="col-xs-12 col-lg-4 m-t-2">
+                    <select class="selectpicker" id="repayments_type1" data-style="btn-secondary" data-size="2">
+                      <option>Select</option>
+                      <option>monthly</option>
+                    </select>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <hr>
+            <div class="row form-group m-t-2 m-b-2">
+              <div class="col-xs-6"><a class="link link-add" href="#"><i class="icon-add-circle"></i>Add another</a></div>
+              <div class="col-xs-6"></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-lg-4">
+              <button class="btn btn-primary btn-block" type="submit">Continue</button>
+            </div>
+          </div>
+        </div>
+        <p class="text-xs-center small m-t-2 page-footer">© Qantas Airways Limited ABN 16 009 661 901</p>
+      </main>
+    </div>
+    <!--
+    Bootstrap core JavaScript
+    ==================================================
+    -->
+    <!-- Placed at the end of the document so the pages load faster-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/tether.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/ui-main.js"></script>
+  </body>
+</html>

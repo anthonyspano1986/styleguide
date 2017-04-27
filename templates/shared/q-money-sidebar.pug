@@ -1,0 +1,43 @@
+nav.qmoney-sidebar(role='navigation')
+
+    button.menu-button.qmoney-closeMenu.hidden-md-up
+        .icon-menu
+
+    div.reference-num.hidden-md-up
+        span.label
+            strong Application ref:
+            |  12345678
+
+    h3.m-b-2 Apply for a Qantas Premier credit card
+
+    ol.nav.multi-steps
+        li.nav-item.current(tabindex='0')
+            .section-title
+                | Personal details
+            ul.section-steps
+                li.complete(tabindex='0') About you
+                li.complete(tabindex='0') Contact details
+                li.current(tabindex='0') Address
+                li.incomplete(tabindex='0') Living situation
+                li.incomplete(tabindex='0') Your ID and security
+        li.nav-item.incomplete(tabindex='0')
+            .section-title
+                | Financial details
+        li.nav-item.incomplete(tabindex='0')
+            .section-title
+                | Card preferences
+        li.nav-item.incomplete(tabindex='0')
+            .section-title
+                | Next steps
+
+    a.callout-need-help(href='tel:13001233456')
+        .icon-holder.icon-holder-sm.btn.btn-outline-primary
+            i.icon-call
+        p.m-t-1.m-b-0
+            strong
+                | Need help?
+                br
+                | Call 1300 123 3456
+            |  anytime 24 hours
+            br
+            |  a day, 7 days a week

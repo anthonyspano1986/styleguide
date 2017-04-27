@@ -1,0 +1,45 @@
+extends shared/master.pug
+
+block pageContent
+    .wrapper
+        include shared/q-money-sidebar.pug
+        include shared/q-money-header.pug
+        main#pagecontent.q-money-main-content(role='main')
+            nav.page-actions.m-b-1(role='navigation')
+                a.link.link-back(href='#')
+                    i.icon-chevron-left
+                    | Back to section link
+                a.link.link-save-exit.hidden-xs-down(href='#') Save and exit
+                    i.icon-exit-to-app
+            .content-panel.card
+                .row
+                    .col-xs-12.col-sm-12.col-md-12.col-lg-12.text-xs-center
+                        h2.m-b-3 We’re checking your infomation
+                        p.lead-small
+                            | It can take up a few minutes to check your information you’ve provided.
+                            br
+                            br
+                            | Please don’t close the browser window.
+                .row
+                    .col-xs-12.col-lg-12.text-xs-center
+                        .spinner
+                .row
+                    .col-xs-12.col-lg-12.text-xs-center
+                        img.hidden-md-down(src='img/qantas-card-front.png', alt='')
+                .checking-information-benefits.row.m-t-3.m-b-3
+                    .col-xs-12.col-md-4.checking-information-benefits--item.text-xs-center
+                        .card.card-inverse.card-primary.checking-information-benefits--symbol-1.d-flex.flex-items-xs-center.flex-items-xs-middle
+                            i.icon-qantas-points
+                        strong Earn 50,000 bonus Qantas Points
+                    .col-xs-12.col-md-4.checking-information-benefits--item.text-xs-center
+                        .card.card-inverse.card-primary.checking-information-benefits--symbol-2.d-flex.flex-items-xs-center.flex-items-xs-middle
+                            | $
+                        strong Receive Qantas lounge passes
+                    .col-xs-12.col-md-4.checking-information-benefits--item.text-xs-center
+                        .card.card-inverse.card-primary.checking-information-benefits--symbol-3.d-flex.flex-items-xs-center.flex-items-xs-middle
+                            | 0%
+                        strong Pay 0% p.a. on balance transfers for 14 months
+            p.text-xs-center.small.m-t-2.page-footer
+                | © Qantas Airways Limited ABN 16 009 661 901
+
+

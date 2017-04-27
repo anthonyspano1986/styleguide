@@ -1,0 +1,81 @@
+extends shared/master.pug
+
+block pageContent
+    .wrapper
+        include shared/q-money-sidebar.pug
+        include shared/q-money-header.pug
+        main#pagecontent.q-money-main-content(role='main')
+            nav.page-actions.m-b-1(role='navigation')
+                a.link.link-back(href='#')
+                    i.icon-chevron-left
+                    | Back to section link
+                a.link.link-save-exit.hidden-xs-down(href='#') Save and exit
+                    i.icon-exit-to-app
+            .content-panel.card
+                img.pull-lg-right.hidden-md-down(src='img/qantas-card-front.png', alt='')
+                .row
+                    .col-xs-12.col-sm-12.col-md-12.col-lg-12
+                        h2.m-b-1 Balance transfers
+                        p Transfer the balance from your existing cards to Qantas Premier credit card and take advantage of 0% p.a. on balance transfers for 14 months.
+
+                // Form
+                .row.form-group
+                    .col-xs-12.col-sm-12.col-md-12.col-lg-12
+                        label.m-b-2 Do you want a transfer balance for your Qantas Premier credit card?
+                        label.custom-control.custom-radio
+                            input.custom-control-input(name='id-check', type='radio', id='australian_driver_licence')
+                            span.custom-control-indicator
+                            span.custom-control-description Yes
+                        label.custom-control.custom-radio
+                            input.custom-control-input(name='id-check', type='radio', id='passport')
+                            span.custom-control-indicator
+                            span.custom-control-description No
+                .row
+                    p.col-xs-12.col-lg-8
+                        | You can transfer up to $8,000 from your credit cards, store cards, loans or other credit accounts (maximum 4).
+                .row.form-group
+                    .col-xs-12.col-sm-12.col-md-12.col-lg-8
+                        label.custom-control.custom-checkbox
+                            input.custom-control-input(type='checkbox')
+                            span.custom-control-indicator
+                            span.custom-control-description
+                                p.small
+                                    | I have read and accept the balance transfer
+                                    a(href='')  terms and conditions
+                                    | .
+
+                #cc-balance-transfer.balance-transfer
+                    ul.balance-transfer-account.list-unstyled.m-b-2(aria-live='polite', aria-relevant='additions removals')
+                        li
+                            .row.form-group
+                                .col-xs-12.col-lg-8
+                                    label(for='account1-transfer-from') Transfer from
+                                    input#account1-transfer-from.form-control(type='text', placeholder='Commonwealth Bank of Australia 1818')
+                            .row.form-group
+                                .col-xs-12.col-lg-4.mxs-b-1
+                                    label(for='account1-account-name').text-nowrap Account name
+                                    input#account1-account-name.form-control(type='text', placeholder='')
+                                .col-xs-12.col-lg-4.mxs-b-1
+                                    label(for='account1-bpay-customer-ref').text-nowrap BPAY customer reference no.
+                                    input#account1-bpay-customer-ref.form-control(type='text', placeholder='')
+                                .col-xs-12.col-lg-4
+                                    label(for='account1-amount').text-nowrap Amount (min $500)
+                                    input#account1-amount.form-control(type='text', placeholder='')
+                    hr
+                    .row.form-group.m-t-2.m-b-2
+                        .col-xs-6
+                            a.link.link-add(href='#')
+                                i.icon-add-circle
+                                | Add another
+                        .col-xs-6
+                            p.text-xs-right.text-nowrap.m-b-0
+                                | Up to
+                                strong  $8,000
+                                |  left to transfer
+
+                .row
+                    .col-xs-12.col-sm-12.col-md-12.col-lg-4
+                        button.btn.btn-primary.btn-block(type='submit') Continue
+
+            p.text-xs-center.small.m-t-2.page-footer
+                | © Qantas Airways Limited ABN 16 009 661 901

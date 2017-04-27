@@ -1,0 +1,90 @@
+.qmoney-sidebar {
+  width: 300px;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  position: fixed;
+  top: 4.375rem;
+  bottom: 0;
+  left: -300px;
+  background-color: #fff;
+  padding: 0;
+  z-index: 2;
+  transition: left 0.2s cubic-bezier(0.23, 1, 0.32, 1);
+  padding: 0 2.5rem 0 2.5rem;
+
+  > .callout-need-help {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 2.5rem;
+  }
+
+
+
+}
+
+@include media-breakpoint-up(md) {
+  .qmoney-sidebar {
+    left: 0px;
+
+    h3 {
+      margin-top: 3rem !important;
+    }
+  }
+
+}
+
+@include media-breakpoint-down(md) {
+
+
+  .has-openSidebar {
+    .qmoney-openMenu {
+      // Cover
+      &:after {
+        content: '';
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: rgba(244, 245, 246, 1);
+        z-index: 300;
+        visibility: visible;
+        opacity: 1;
+        transition: opacity 0.4s;
+      }
+    }
+  }
+
+  .qmoney-sidebar {
+    //&:after {
+    //  visibility: visible;
+    //  opacity: 1;
+    //}
+    &.is-open {
+      left: 0;
+      top: 0;
+      z-index: 400;
+    }
+    .reference-num {
+      margin-top: 1.5rem;
+    }
+    .menu-button {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+    }
+    h3 {
+      margin-top: 1rem !important;
+    }
+
+  }
+}
+
+
+
+
+
+
+
+
+

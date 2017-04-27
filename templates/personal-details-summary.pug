@@ -1,0 +1,79 @@
+extends shared/master.pug
+
+block pageContent
+    .wrapper
+        include shared/q-money-sidebar.pug
+        include shared/q-money-header.pug
+        main#pagecontent.q-money-main-content(role='main')
+            nav.page-actions.m-b-1
+                a.link.link-back(href='#')
+                    i.icon-chevron-left
+                    | Back to section link
+                a.link.link-save-exit.hidden-xs-down(href='#') Save and exit
+                    i.icon-exit-to-app
+
+            .content-panel.card
+                img.pull-lg-right.hidden-md-down(src='img/qantas-card-front.png', alt='')
+                .row
+                    .col-xs-12.col-sm-12.col-md-12.col-lg-12
+                        h2.m-b-1 Personal details summary
+                        p We’ll send your Qantas Premier credit card to this address so it can’t be a PO box.
+                .row
+                    .col-xs-12.col-lg-12
+                        dl.personal-summary.row
+                            dt.col-sm-4 Name
+                            dd.col-sm-8 Mr John Citizen
+                            dt.col-sm-4 Mobile
+                            dd.col-sm-8 0411 222 333
+                            dt.col-sm-4 Email
+                            dd.col-sm-8 john.citizen@emailaddress.com
+                            dt.col-sm-4 Date of birth
+                            dd.col-sm-8 10 Oct 1980
+                            dt.col-sm-4 Nationality
+                            dd.col-sm-8 Australian
+                .row
+                    .col-xs-12.col-lg-9
+                        .alert.alert-warning.clearfix(role='alert')
+                            i.icon-warning
+                            h6.m-b-0 Please check the details below as you won’t be able to change them later.
+                .row
+                    .col-xs-12.col-lg-9
+                        table.personal-summary-details.table.table-hover.table-bay-blue.m-b-0
+                            caption.hidden-xs-up Personal details
+                                tbody
+                                    tr
+                                        th(scope='row', width='40%') Address
+                                        td(width='50%') 80 George Street, SYDNEY NSW 2000
+                                        td.no-l-border
+                                            a.link.link-default.pull-xs-right(href='#') Edit
+                                    tr
+                                        th(scope='row') Residential status
+                                        td Renting
+                                        td.no-l-border
+                                            a.link.link-default.pull-xs-right(href='#') Edit
+                                    tr
+                                        th(scope='row') Marital status
+                                        td Married
+                                        td.no-l-border
+                                            a.link.link-default.pull-xs-right(href='#') Edit
+                                    tr
+                                        th(scope='row') Dependants
+                                        td 2
+                                        td.no-l-border
+                                            a.link.link-default.pull-xs-right(href='#') Edit
+                                    tr
+                                        th(scope='row') Licence number
+                                        td 12345678 NSW
+                                        td.no-l-border
+                                            a.link.link-default.pull-xs-right(href='#') Edit
+                                    tr
+                                        th(scope='row') Mother&apos;s maiden name
+                                        td Smith
+                                        td.no-l-border
+                                            a.link.link-default.pull-xs-right(href='#') Edit
+
+                .row
+                    .col-xs-12.col-sm-12.col-md-12.col-lg-4.m-t-2
+                        button.btn.btn-primary.btn-block(type='submit') Continue
+            p.text-xs-center.small.m-t-2.page-footer
+                | © Qantas Airways Limited ABN 16 009 661 901

@@ -1,0 +1,79 @@
+.accordion-simple {
+  .card-header {
+    padding-top: .5rem;
+    text-align: left;
+  }
+  .card {
+    background-color: $gray-lightest;
+    border-radius: 0;
+  }
+  .card-block {
+    background-color: transparent;
+  }
+  a[data-toggle="collapse"] {
+    display: block;
+    @include transition(transform .25s ease-in-out);
+
+    [class^="icon-"] {
+      @include transition(transform .25s ease-in-out);
+    }
+  }
+}
+
+.accordion-complex {
+  .card-header {
+    text-align: left;
+    border-bottom: none;
+    padding: 1.25rem;
+  }
+  .card {
+    background-color: $qantas-white;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+    border: none;
+    border-radius: 0;
+    margin-bottom: .5rem;
+  }
+  .collapse.in {
+    .card-block {
+      padding-bottom: 1.5rem;
+    }
+  }
+  .card-block {
+    background-color: transparent;
+    padding-top: 0.25rem;
+    padding-left: 1.875rem;
+  }
+  h5 {
+    font-size: 1.125rem;
+  }
+  a[data-toggle="collapse"] {
+    display: block;
+    @include transition(transform .25s ease-in-out);
+    color: $qantas-charcoal;
+
+    &:not(.collapsed) {
+      [class^="icon-"] {
+        visibility: hidden;
+        opacity: 0;
+      }
+    }
+
+    [class^="icon-"] {
+      @include transition(transform .25s ease-in-out);
+      //float: right;
+      //top: -0.375rem;
+      //right: .5rem;
+      //position: relative;
+
+      position: absolute;
+      top: 0.75rem;
+      right: 1.5rem;
+      color: $qantas-red;
+      width: 20px;
+      height: 20px;
+      &:before {
+        font-size: 2rem;
+      }
+    }
+  }
+}

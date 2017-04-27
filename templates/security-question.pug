@@ -1,0 +1,29 @@
+extends shared/master.pug
+
+block pageContent
+    .wrapper
+        include shared/q-money-sidebar.pug
+        include shared/q-money-header.pug
+        main#pagecontent.q-money-main-content(role='main')
+            nav.page-actions.m-b-1
+                a.link.link-back(href='#')
+                    i.icon-chevron-left
+                    | Back to section link
+                a.link.link-save-exit.hidden-xs-down(href='#') Save and exit
+                    i.icon-exit-to-app
+
+            .content-panel.card
+                .row
+                    .col-xs-12.col-sm-12.col-md-12.col-lg-12
+                        h2.m-b-1 Security question
+                        p If you need to call us about your application or if you forgot your Qantas Frequent Flyer PIN, we will verify your identity using your mother's maiden name.
+                .row.form-group
+                    .col-xs-12.col-sm-12.col-md-12.col-lg-6
+                        label.form-label(for='mother_maiden_name')
+                            | Mother's maiden name
+                        input#mother_maiden_name.form-control(type='text', placeholder='Smith')
+                .row
+                    .col-xs-12.col-sm-12.col-md-12.col-lg-4.m-t-2
+                        button.btn.btn-primary.btn-block(type='submit') Next
+            p.text-xs-center.small.m-t-2.page-footer
+                | © Qantas Airways Limited ABN 16 009 661 901

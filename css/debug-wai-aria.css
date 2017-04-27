@@ -1,0 +1,169 @@
+/*
+-------------------------------
+    debug-WAI-ARIA
+-------------------------------
+*/
+
+.debug-aria [role]:before {
+  content: "role: " attr(role);
+}
+
+.debug-aria [aria-activedescendant]:after {
+  content: "aria-activedescendant: " attr(aria-activedescendant);
+}
+.debug-aria [aria-atomic]:after {
+  content: "aria-atomic: " attr(aria-atomic);
+}
+.debug-aria [aria-autocomplete]:after {
+  content: "aria-autocomplete: " attr(aria-autocomplete);
+}
+.debug-aria [aria-busy]:after {
+  content: "aria-busy: " attr(aria-busy);
+}
+.debug-aria [aria-checked]:after {
+  content: "aria-checked: " attr(aria-checked);
+}
+.debug-aria [aria-controls]:after {
+  content: "aria-controls: " attr(aria-controls);
+}
+.debug-aria [aria-describedby]:after {
+  content: "aria-describedby: " attr(aria-describedby);
+}
+.debug-aria [aria-disabled]:after {
+  content: "aria-disabled: " attr(aria-disabled);
+}
+.debug-aria [aria-readonly]:after {
+  content: "aria-readonly: " attr(aria-readonly);
+}
+.debug-aria [aria-dropeffect]:after {
+  content: "aria-dropeffect: " attr(aria-dropeffect);
+}
+.debug-aria [aria-expanded]:after {
+  content: "aria-expanded: " attr(aria-expanded);
+}
+.debug-aria [aria-flowto]:after {
+  content: "aria-flowto: " attr(aria-flowto);
+}
+.debug-aria [aria-grabbed]:after {
+  content: "aria-grabbed: " attr(aria-grabbed);
+}
+.debug-aria [aria-haspopup]:after {
+  content: "aria-haspopup: " attr(aria-haspopup);
+}
+.debug-aria [aria-hidden]:after {
+  content: "aria-hidden: " attr(aria-hidden);
+}
+.debug-aria [aria-invalid] :after {
+  content: "aria-invalid: " attr(aria-invalid);
+}
+.debug-aria [aria-label]:after {
+  content: "aria-label: " attr(aria-label);
+}
+.debug-aria [aria-labelledby]:after {
+  content: "aria-labelledby: " attr(aria-labelledby);
+}
+.debug-aria [aria-level]:after {
+  content: "aria-level: " attr(aria-level);
+}
+.debug-aria [aria-live]:after {
+  content: "aria-live: " attr(aria-live);
+}
+.debug-aria [aria-multiline]:after {
+  content: "aria-multiline: " attr(aria-multiline);
+}
+.debug-aria [aria-multiselectable]:after {
+  content: "aria-multiselectable: " attr(aria-multiselectable);
+}
+.debug-aria [aria-orientation]:after {
+  content: "aria-orientation: " attr(aria-orientation);
+}
+.debug-aria [aria-owns]:after {
+  content: "aria-owns: " attr(aria-owns);
+}
+.debug-aria [aria-posinset]:after {
+  content: "aria-posinset: " attr(aria-posinset);
+}
+.debug-aria [aria-pressed]:after {
+  content: "aria-pressed: " attr(aria-pressed);
+}
+.debug-aria [aria-readonly]:after {
+  content: "aria-readonly: " attr(aria-readonly);
+}
+.debug-aria [aria-relevant]:after {
+  content: "aria-relevant: " attr(aria-relevant);
+}
+.debug-aria [aria-required]:after {
+  content: "aria-required: " attr(aria-required);
+}
+.debug-aria [aria-selected]:after {
+  content: "aria-selected: " attr(aria-selected);
+}
+.debug-aria [aria-setsize]:after {
+  content: "aria-setsize: " attr(aria-setsize);
+}
+.debug-aria [aria-sort]:after {
+  content: "aria-sort: " attr(aria-sort);
+}
+.debug-aria [aria-valuemax]:after {
+  content: "aria-valuemax: " attr(aria-valuemax);
+}
+.debug-aria [aria-valuemin]:after {
+  content: "aria-valuemin: " attr(aria-valuemin);
+}
+.debug-aria [aria-valuenow]:after {
+  content: "aria-valuenow: " attr(aria-valuenow);
+}
+.debug-aria [aria-valuetext]:after {
+  content: "aria-valuetext: " attr(aria-valuetext);
+}
+
+.debug-aria [role]:before,
+.debug-aria [aria-activedescendant]:after,
+.debug-aria [aria-atomic]:after,
+.debug-aria [aria-autocomplete]:after,
+.debug-aria [aria-busy]:after,
+.debug-aria [aria-checked]:after,
+.debug-aria [aria-controls]:after,
+.debug-aria [aria-describedby]:after,
+.debug-aria [aria-disabled]:after,
+.debug-aria [aria-readonly]:after,
+.debug-aria [aria-dropeffect]:after,
+.debug-aria [aria-expanded]:after,
+.debug-aria [aria-flowto]:after,
+.debug-aria [aria-grabbed]:after,
+.debug-aria [aria-haspopup]:after,
+.debug-aria [aria-hidden]:after,
+.debug-aria [aria-invalid]:after,
+.debug-aria [aria-label]:after,
+.debug-aria [aria-labelledby]:after,
+.debug-aria [aria-level]:after,
+.debug-aria [aria-live]:after,
+.debug-aria [aria-multiline]:after,
+.debug-aria [aria-multiselectable]:after,
+.debug-aria [aria-orientation]:after,
+.debug-aria [aria-owns]:after,
+.debug-aria [aria-posinset]:after,
+.debug-aria [aria-pressed]:after,
+.debug-aria [aria-readonly]:after,
+.debug-aria [aria-relevant]:after,
+.debug-aria [aria-required]:after,
+.debug-aria [aria-selected]:after,
+.debug-aria [aria-setsize]:after,
+.debug-aria [aria-sort]:after,
+.debug-aria [aria-valuemax]:after,
+.debug-aria [aria-valuemin]:after,
+.debug-aria [aria-valuenow]:after,
+.debug-aria [aria-valuetext]:after {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: inline;
+  z-index: 49;
+  text-transform: uppercase;
+  border: 1px solid #333;
+  padding: 4px;
+  color: #344235;
+  font-weight: bold;
+  background: #FBE799;
+  font: 12px Verdana, sans-serif;
+}

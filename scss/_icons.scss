@@ -1,0 +1,383 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "qantas-components";
+  src: url("../fonts/qantas-components.eot");
+  src: url("../fonts/qantas-components.eot?#iefix") format("embedded-opentype"),
+  url("../fonts/qantas-components.woff") format("woff"),
+  url("../fonts/qantas-components.ttf") format("truetype"),
+  url("../fonts/qantas-components.svg#qantas-components") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "qantas-components" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1.5rem;
+  vertical-align: middle;
+  position: relative;
+  //top: 2px;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  height: auto;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+//.icon-pause:before {
+//  content: "\4c";
+//}
+//.icon-play:before {
+//  content: "\4d";
+//}
+//.icon-add-circle:before {
+//  content: "\61";
+//}
+//.icon-add-circle-outline:before {
+//  content: "\62";
+//}
+//.icon-arrow-back:before {
+//  content: "\63";
+//}
+//.icon-arrow-down:before {
+//  content: "\64";
+//}
+//.icon-arrow-external:before {
+//  content: "\65";
+//}
+//.icon-arrow-right:before {
+//  content: "\66";
+//}
+//.icon-arrow-up:before {
+//  content: "\67";
+//}
+//.icon-calendar:before {
+//  content: "\68";
+//}
+//.icon-check:before {
+//  content: "\69";
+//}
+//.icon-check-circle:before {
+//  content: "\6a";
+//}
+//.icon-check-circle-outline:before {
+//  content: "\6b";
+//}
+//.icon-chevron-down:before {
+//  content: "\6c";
+//}
+//.icon-chevron-left:before {
+//  content: "\6d";
+//}
+//.icon-chevron-right:before {
+//  content: "\6e";
+//}
+//.icon-chevron-up:before {
+//  content: "\6f";
+//}
+//.icon-close:before {
+//  content: "\70";
+//}
+//.icon-close-circle:before {
+//  content: "\71";
+//}
+//.icon-close-circle-outline:before {
+//  content: "\72";
+//}
+//.icon-control:before {
+//  content: "\73";
+//}
+//.icon-dollar:before {
+//  content: "\74";
+//}
+//.icon-fees:before {
+//  content: "\75";
+//}
+//.icon-global-access:before {
+//  content: "\76";
+//}
+//.icon-info:before {
+//  content: "\77";
+//}
+//.icon-mail:before {
+//  content: "\78";
+//}
+//.icon-minus:before {
+//  content: "\79";
+//}
+//.icon-plus:before {
+//  content: "\7a";
+//}
+//.icon-profile:before {
+//  content: "\41";
+//}
+//.icon-qantas-points:before {
+//  content: "\42";
+//}
+//.icon-refresh:before {
+//  content: "\43";
+//}
+//.icon-remove-circle:before {
+//  content: "\44";
+//}
+//.icon-safety:before {
+//  content: "\45";
+//}
+//.icon-star:before {
+//  content: "\46";
+//}
+//.icon-switch:before {
+//  content: "\47";
+//}
+//.icon-switch-vertical:before {
+//  content: "\48";
+//}
+//.icon-warning:before {
+//  content: "\49";
+//}
+//.icon-warning-default:before {
+//  content: "\4a";
+//}
+//.icon-call:before {
+//  content: "\4b";
+//}
+//.icon-application:before {
+//  content: "\4e";
+//}
+//.icon-menu:before {
+//  content: "\4f";
+//}
+//.icon-exit-to-app:before {
+//  content: "\50";
+//}
+
+.icon-pause:before {
+  content: "\4c";
+}
+
+.icon-play:before {
+  content: "\4d";
+}
+
+.icon-add-circle:before {
+  content: "\61";
+}
+
+.icon-add-circle-outline:before {
+  content: "\62";
+}
+
+.icon-arrow-back:before {
+  content: "\63";
+}
+
+.icon-arrow-down:before {
+  content: "\64";
+}
+
+.icon-arrow-external:before {
+  content: "\65";
+}
+
+.icon-arrow-right:before {
+  content: "\66";
+}
+
+.icon-arrow-up:before {
+  content: "\67";
+}
+
+.icon-calendar:before {
+  content: "\68";
+}
+
+.icon-check:before {
+  content: "\69";
+}
+
+.icon-check-circle:before {
+  content: "\6a";
+}
+
+.icon-check-circle-outline:before {
+  content: "\6b";
+}
+
+.icon-chevron-down:before {
+  content: "\6c";
+}
+
+.icon-chevron-left:before {
+  content: "\6d";
+}
+
+.icon-chevron-right:before {
+  content: "\6e";
+}
+
+.icon-chevron-up:before {
+  content: "\6f";
+}
+
+.icon-close:before {
+  content: "\70";
+}
+
+.icon-close-circle:before {
+  content: "\71";
+}
+
+.icon-close-circle-outline:before {
+  content: "\72";
+}
+
+.icon-control:before {
+  content: "\73";
+}
+
+.icon-dollar:before {
+  content: "\74";
+}
+
+.icon-fees:before {
+  content: "\75";
+}
+
+.icon-global-access:before {
+  content: "\76";
+}
+
+.icon-info:before {
+  content: "\77";
+}
+
+.icon-mail:before {
+  content: "\78";
+}
+
+.icon-minus:before {
+  content: "\79";
+}
+
+.icon-plus:before {
+  content: "\7a";
+}
+
+.icon-profile:before {
+  content: "\41";
+}
+
+.icon-qantas-points:before {
+  content: "\42";
+}
+
+.icon-refresh:before {
+  content: "\43";
+}
+
+.icon-remove-circle:before {
+  content: "\44";
+}
+
+.icon-safety:before {
+  content: "\45";
+}
+
+.icon-star:before {
+  content: "\46";
+}
+
+.icon-switch:before {
+  content: "\47";
+}
+
+.icon-switch-vertical:before {
+  content: "\48";
+}
+
+.icon-warning:before {
+  content: "\49";
+}
+
+.icon-warning-default:before {
+  content: "\4a";
+}
+
+.icon-call:before {
+  content: "\4b";
+}
+
+.icon-application:before {
+  content: "\4e";
+}
+
+.icon-menu:before {
+  content: "\4f";
+}
+
+.icon-exit-to-app:before {
+  content: "\50";
+}
+
+.icon-credit-card:before {
+  content: "\51";
+}
+
+.icon-statements:before {
+  content: "\52";
+}
+
+.icons-reference {
+  padding-left: 0;
+  li {
+    list-style: none;
+    margin-bottom: 2rem;
+  }
+}
+
+.icon-placeholder {
+  font-size: 3rem;
+}
+
+.icon-holder {
+  border-radius: 50%;
+  @include size(64px, 64px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  [class^="icon-"]:before,
+  [class*=" icon-"]:before {
+    line-height: 1;
+    position: relative;
+  }
+  &.icon-holder-lg {
+    @include size(64px, 64px);
+    [class^="icon-"]:before,
+    [class*=" icon-"]:before {
+      font-size: 2.5rem;
+    }
+  }
+  &.icon-holder-sm {
+    @include size(30px, 30px);
+    [class^="icon-"]:before,
+    [class*=" icon-"]:before {
+      font-size: 1.5rem;
+      top: 0rem;
+    }
+  }
+}
+
+

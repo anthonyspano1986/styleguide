@@ -1,0 +1,10 @@
+.callout-need-help {
+  p {
+    font-size: .875rem;
+    line-height: 1.3;
+  }
+  color: $qantas-charcoal;
+  &:hover {
+    text-decoration: none;
+  }
+}

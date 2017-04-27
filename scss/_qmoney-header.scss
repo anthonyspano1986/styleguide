@@ -1,0 +1,68 @@
+.qmoney-header {
+  display: flex;
+  height: 4.375rem;
+  background: $qantas-white;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+  flex-direction: row;
+  align-items: center;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+
+  &.example {
+    position: relative;
+  }
+
+  .progress {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .brand {
+    position: relative;
+    text-indent: -150%;
+    overflow: hidden;
+    margin-left: 2.5rem;
+    @include size(140px, 42px);
+
+    &.brand-qmoney {
+      background: url(../img/qantas-money@2x.png) no-repeat;
+      background-size: 140px 42px;
+    }
+  }
+  .reference-num {
+    margin-left: auto;
+    margin-right: 2.5rem;
+    .label {
+      font-size: 1.125rem;
+      margin-left: .5rem;
+    }
+    [class^="icon-"] {
+      &:before {
+        font-size: 1.625rem;
+        top: -.125rem;
+      }
+    }
+  }
+}
+
+
+@include media-breakpoint-down(sm) {
+  .qmoney-header {
+    height: 3.75rem;
+    .brand {
+      margin-left: .5rem;
+    }
+    .menu-button {
+      margin-left: .5rem;
+    }
+  }
+
+
+}

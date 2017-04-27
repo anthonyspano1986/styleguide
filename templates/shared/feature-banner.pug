@@ -1,0 +1,105 @@
+.feature-banner.shapes
+  .container
+    .row
+      .col-xs-6.m-t-1
+        
+        .row
+          .col-xs-8
+            h6.m-b-0
+              span.label.label-info.text-dark HURRY, ENDS SOON                        
+            h1.text-light(style='font-size: 2rem;') Adventure America
+
+        .row
+          .col-xs-12.m-b-1
+            form.form-inline(action='')
+              label.text-light(for='') From
+
+              select.form-control.form-control-sm
+                option(selected='') Sydney                                
+                option(value='1') One                   
+                option(value='2') Two       
+                option(value='3') Three
+
+        .row
+          .col-xs-4
+            h5.text-light.m-b-0 Los Angeles
+            .text-light.m-b-0 Economy one way from
+            h3.text-light
+              sup $ 
+              | 1,399
+              sup *
+          .col-xs-4
+            h5.text-light.m-b-0 Los Angeles
+            .text-light.m-b-0 Economy one way from
+            h3.text-light
+              sup $ 
+              | 1,399
+              sup *
+          .col-xs-4
+            h5.text-light.m-b-0 Los Angeles                        
+            .text-light.m-b-0 Economy one way from                      
+            h3.text-light
+              sup $ 
+              | 1,399 
+              sup *
+
+        .row
+          .col-xs-6
+            button.btn.btn-block.btn-primary-outline(type='submit') SEE ALL FLIGHT SPECIALS
+
+      .col-xs-12
+        ul.nav.nav-tabs.nav-tabs-inverse.full-width-tabs.search-tabs(role='tablist')
+          li.nav-item
+            a.nav-link.active.text-xs-center(data-toggle='tab', href='#search-tab-1', role='tab')
+              i.icon-book-trip                      
+              span Book a trip                    
+          li.nav-item
+            a.nav-link.text-xs-center(data-toggle='tab', href='#search-tab-2', role='tab')
+              i.icon-manage-booking                          
+              span Manage booking                  
+          li.nav-item
+            a.nav-link.text-xs-center(data-toggle='tab', href='#search-tab-2', role='tab')
+              i.icon-check-in                            
+              span Check-in                   
+          li.nav-item
+            a.nav-link.text-xs-center(data-toggle='tab', href='#search-tab-2', role='tab')
+              i.icon-flight-status                         
+              span Flight status
+
+        // Tab panes
+        .tab-content
+          #search-tab-1.tab-pane.active.tab-pane-inverse(role='tabpanel')
+            .row.m-b-1
+              .col-xs-6
+                nav.nav.nav-inline.nav-inverse
+                  a.nav-link.active(href='#') Flights                                    
+                  a.nav-link(href='#') Hotels                                   
+                  a.nav-link(href='#') Cars                            
+              .col-xs-6.text-xs-right
+                ul.nav.nav-inline.nav-inverse
+                  li.nav-item
+                    label.radio-inline
+                      input#inlineRadio1(type='radio', name='inlineRadioOptions', value='option1', checked='') 
+                      | Return                                     
+                  li.nav-item
+                    label.radio-inline
+                      input#inlineRadio2(type='radio', name='inlineRadioOptions', value='option2') 
+                      | One way                                    
+                  li.nav-item
+                    a.nav-link(href='#') Multi-city 
+                      i.icon-chevron-right                                  
+                  li.nav-item
+                    a.nav-link(href='#') Round the world 
+                      i.icon-chevron-right                       
+            .row.m-t-1
+              .col-xs-5
+                .form-group.m-b-0
+                  label.input-label From                                    
+                  input.form-control(type='text', placeholder='From', value='Sydney, Australia')                          
+              .col-xs-5
+                .form-group.m-b-0
+                  label.input-label To                                    
+                  input.form-control(type='text', placeholder='', value='')                          
+              .col-xs-2
+                button.btn.btn-primary.btn-block(type='submit')
+                  i.icon-chevron-right 

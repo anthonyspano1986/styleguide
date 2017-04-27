@@ -1,0 +1,49 @@
+extends shared/master.pug
+
+block pageContent
+    .wrapper
+        include shared/q-money-sidebar.pug
+        include shared/q-money-header.pug
+        main#pagecontent.q-money-main-content(role='main')
+            nav.page-actions.m-b-1
+                a.link.link-back(href='#')
+                    i.icon-chevron-left
+                    | Back to section link
+                a.link.link-save-exit.hidden-xs-down(href='#') Save and exit
+                    i.icon-exit-to-app
+
+            .content-panel.card
+                .row
+                    .col-xs-12.col-sm-12.col-md-12.col-lg-12
+                        h2.m-b-1 Work and home
+                .row.form-group
+                    .col-xs-12.col-sm-12.col-md-12.col-lg-6
+                        label.form-label(for='employment_type')
+                            | Employment type
+                        select#employment_type.selectpicker(data-style="btn-secondary", data-size="4")
+                            option Select
+                            option A
+                            option B
+                            option C
+                .row.form-group
+                    .col-xs-12.col-sm-12.col-md-12.col-lg-6
+                        label.form-label(for='marital_status')
+                            | Marital status
+                        select#marital_status.selectpicker(data-style="btn-secondary", data-size="3")
+                            option Select
+                            option Married
+                            option Single
+                .row.form-group
+                    .col-xs-12.col-sm-12.col-md-12.col-lg-6
+                        label.form-label(for='number_of_dependants').text-nowrap
+                            | Number of people dependant on your income, excluding yourself
+                        select#number_of_dependants.selectpicker(data-style="btn-secondary", data-size="4")
+                            option Select
+                            option A
+                            option B
+                            option C
+                .row
+                    .col-xs-12.col-sm-12.col-md-12.col-lg-4.m-t-2
+                        button.btn.btn-primary.btn-block(type='submit') Next
+            p.text-xs-center.small.m-t-2.page-footer
+                | © Qantas Airways Limited ABN 16 009 661 901

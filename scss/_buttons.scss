@@ -1,0 +1,293 @@
+// scss-lint:disable QualifyingElement
+
+//
+// Base styles
+//
+
+.btn {
+  display: inline-block;
+  font-weight: $btn-font-weight;
+  line-height: $btn-line-height;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  border: $input-btn-border-width solid transparent;
+  @include button-size($btn-padding-y, $btn-padding-x, $font-size-base, $btn-border-radius);
+  @include transition(all .2s ease-in-out);
+  text-transform: uppercase;
+  font-family: $font-family-bold;
+  letter-spacing: 2px;
+
+  &:hover {
+    text-decoration: none !important;
+  }
+  
+  .label {
+    display: inline-block;
+    margin-left: -1.5rem;
+  }
+
+  &,
+  &:active,
+  &.active {
+    &:focus,
+    &.focus {
+      @include tab-focus();
+    }
+  }
+
+  @include hover-focus {
+    text-decoration: none;
+  }
+  &.focus {
+    text-decoration: none;
+  }
+
+  &:active,
+  &.active {
+    background-image: none;
+    outline: 0;
+    @include box-shadow($btn-active-box-shadow);
+  }
+
+  &.disabled,
+  &:disabled {
+    cursor: $cursor-disabled;
+    opacity: 1;
+    @include box-shadow(none);
+    background-color: $qantas-light-grey;
+    color: $qantas-charcoal;
+    border: 2px solid $qantas-light-grey;
+  }
+}
+
+// Future-proof disabling of clicks on `<a>` elements
+a.btn.disabled,
+fieldset[disabled] a.btn {
+  pointer-events: none;
+}
+
+//
+// Alternate buttons
+//
+
+.btn-primary {
+  @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+}
+
+.btn-secondary {
+  @include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
+}
+
+.btn-info {
+  @include button-variant($btn-info-color, $btn-info-bg, $btn-info-border);
+}
+
+.btn-success {
+  @include button-variant($btn-success-color, $btn-success-bg, $btn-success-border);
+}
+
+.btn-warning {
+  @include button-variant($btn-warning-color, $btn-warning-bg, $btn-warning-border);
+}
+
+.btn-danger {
+  @include button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border);
+}
+
+// Remove all backgrounds
+.btn-outline-primary {
+  @include button-outline-variant($btn-primary-bg);
+}
+
+.btn-outline-secondary {
+  @include button-outline-variant($btn-secondary-border);
+}
+
+.btn-outline-info {
+  @include button-outline-variant($btn-info-bg);
+}
+
+.btn-outline-success {
+  @include button-outline-variant($btn-success-bg);
+}
+
+.btn-outline-warning {
+  @include button-outline-variant($btn-warning-bg);
+}
+
+.btn-outline-danger {
+  @include button-outline-variant($btn-danger-bg);
+}
+
+//
+// Link buttons
+//
+
+// Make a button look and behave like a link
+.btn-link {
+  font-weight: normal;
+  color: $link-color;
+  border-radius: 0;
+
+  &,
+  &:active,
+  &.active,
+  &:disabled {
+    background-color: transparent;
+    @include box-shadow(none);
+  }
+  &,
+  &:focus,
+  &:active {
+    border-color: transparent;
+  }
+  @include hover {
+    border-color: transparent;
+  }
+  @include hover-focus {
+    color: $qantas-red-earth !important;
+    text-decoration: none;
+    background-color: transparent;
+  }
+  &:disabled {
+    @include hover-focus {
+      color: $btn-link-disabled-color;
+      text-decoration: none;
+    }
+  }
+}
+
+//
+// Button Sizes
+//
+
+.btn-lg {
+  // line-height: ensure even-numbered height of button next to large input
+  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $font-size-lg, $btn-border-radius-lg);
+}
+
+.btn-sm {
+  // line-height: ensure proper height of button next to small input
+  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $btn-border-radius-sm);
+}
+
+//
+// Block button
+//
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+// Vertically space out multiple block buttons
+.btn-block + .btn-block {
+  margin-top: $btn-block-spacing-y;
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  &.btn-block {
+    width: 100%;
+  }
+}
+
+// Links
+.link {
+  color: $qantas-red;
+  font-size: 1rem;
+
+  // hover
+  &:hover {
+    //text-decoration: none;
+    color: $qantas-red-earth;
+  }
+  // focus
+  &:focus {
+    text-decoration: none;
+    color: $qantas-red-earth;
+  }
+  // active
+  &:active {
+    text-decoration: none;
+    color: $qantas-red-earth;
+  }
+}
+
+.link {
+  [class^="icon-"] {
+    position: relative;
+    margin-left: .25rem;
+    &:before {
+      font-size: 1.25rem;
+    }
+  }
+  &.link-back {
+    [class^="icon-"] {
+      margin-right: .25rem;
+      margin-left: 0rem;
+      &:before {
+        font-size: 1.25rem;
+      }
+    }
+  }
+  &.link-save-exit {
+    [class^="icon-"] {
+      margin-left: .75rem;
+    }
+  }
+  &.link-add {
+    color: $qantas-charcoal;
+    top: -.25rem;
+    position: relative;
+    [class^="icon-"] {
+      color: $qantas-red;
+      margin-right: .25rem;
+      margin-left: 0;
+      &:before {
+        font-size: 1.75rem;
+        position: relative;
+        top: -0.125rem;
+        margin-left: -.25rem;
+      }
+    }
+
+  }
+}
+
+.btn-terms-condition {
+  color: $qantas-charcoal !important;
+}
+
+.btn-add, .btn-remove {
+  letter-spacing: 0;
+  // remove borders
+  border-color: transparent !important;
+  border-width: 0 !important;
+  > [class^="icon-"] {
+    vertical-align: middle;
+    margin-right: .25rem;
+    top: -.125rem;
+    position: relative;
+  }
+}
+
+.btn-edit {
+  letter-spacing: 0;
+  border-color: transparent !important;
+  border-width: 0 !important;
+  > [class^="icon-"] {
+    vertical-align: middle;
+  }
+}
+
+.menu-button {
+  -webkit-appearance: none;
+  background: none;
+  border: none;
+}

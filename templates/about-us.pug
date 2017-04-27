@@ -1,0 +1,73 @@
+extends shared/master.pug
+
+block pageContent
+    .wrapper
+        include shared/q-money-sidebar.pug
+        include shared/q-money-header.pug
+        main#pagecontent.q-money-main-content(role='main')
+            .content-panel.card
+                img.pull-lg-right.hidden-md-down(src='img/qantas-card-front.png', alt='')
+                .row
+                    .col-xs-12.col-sm-12.col-md-12.col-lg-12
+                        h2.m-b-1 About you
+                        p Please enter your name exactly as it appears on your ID documents.
+
+                // Form
+                .row.form-group
+                    .col-xs-12.col-sm-12.col-md-12.col-lg-4
+                        label.form-label(for='title')
+                            | Title
+                        select#title.selectpicker(data-style="btn-secondary", data-size="4")
+                            option Select
+                            option Mr
+                            option Mrs
+                .row.form-group
+                    .col-xs-12.col-sm-12.col-md-12.col-lg-4
+                        label.form-label(for='first_name')
+                            | Title
+                        input#first_name.form-control(type='text', placeholder='')
+                    .col-xs-12.col-sm-12.col-md-12.col-lg-4.mxs-t-1
+                        label.form-label(for='middle_name')
+                            | Middle names (if any)
+                        input#middle_name.form-control(type='text', placeholder='')
+                    .col-xs-12.col-sm-12.col-md-12.col-lg-4.mxs-t-1
+                        label.form-label(for='last_name')
+                            | Last name
+                        input#last_name.form-control(type='text', placeholder='')
+                .row.form-group
+                    .col-xs-12.col-sm-12.col-md-12.col-lg-4
+                        label.form-label(for='date_of_birth')
+                            | Date of birth
+                        input#date_of_birth.form-control(type='text', placeholder='DD/MM/YYYY')
+                    .col-xs-12.col-sm-12.col-md-12.col-lg-4.mxs-t-1
+                        label.form-label(for='nationality')
+                            | Nationality
+                        select#nationality.selectpicker(data-style="btn-secondary", data-size="1")
+                            option Select
+                .row.form-group
+                    .col-xs-12.col-sm-12.col-md-12.col-lg-4
+                        label.form-label(for='australian_mobile')
+                            | Australian mobile
+                        input#australian_mobile.form-control(type='text', placeholder='')
+                .row.form-group
+                    .col-xs-12.col-sm-12.col-md-12.col-lg-8
+                        label.custom-control.custom-checkbox
+                            input.custom-control-input(type='checkbox')
+                            span.custom-control-indicator
+                            span.custom-control-description
+                                p.small
+                                    | I have read and accept the
+                                    a(href='')  Electronic Communication Consent
+                                    | , Declaration and
+                                    a(href='')  Privacy Consent
+                                    | .
+                                p.small
+                                    | I acknowledge that Citibank will obtain a copy of my credit report from one or more credit reporting bodies. Find out more.
+                .row
+                    .col-xs-12.col-sm-12.col-md-12.col-lg-4
+                        button.btn.btn-primary.btn-block(type='submit') Continue
+
+            p.text-xs-center.small.m-t-2.page-footer
+                | © Qantas Airways Limited ABN 16 009 661 901
+
+

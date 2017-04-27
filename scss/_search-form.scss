@@ -1,0 +1,31 @@
+@media only screen and (min-width: 48em) {
+  .multi-search-form {
+    position: absolute;
+    top: 23rem;
+    left: .9375rem;
+    width: calc(100% - 1.875rem);
+    height: 13rem;
+    z-index: 1000;
+    > .container__parsys {
+      position: relative;
+      background: #323232;
+      padding: 1.5rem .875rem 0;
+      border-bottom: solid .5rem transparent;
+      overflow: hidden;
+      max-height: 9.5rem;
+      min-height: 9.5rem;
+    }
+  }
+
+}
+
+@media only screen and (min-width: 60em) {
+  .multi-search-form {
+    max-width: 64.25rem;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+}
+

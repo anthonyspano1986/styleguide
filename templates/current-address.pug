@@ -1,0 +1,61 @@
+extends shared/master.pug
+
+block pageContent
+    .wrapper
+        include shared/q-money-sidebar.pug
+        include shared/q-money-header.pug
+        main#pagecontent.q-money-main-content(role='main')
+            nav.page-actions.m-b-1
+                a.link.link-back(href='#')
+                    i.icon-chevron-left
+                    | Back to section link
+                a.link.link-save-exit.hidden-xs-down(href='#') Save and exit
+                    i.icon-exit-to-app
+
+            .content-panel.card
+                img.pull-lg-right.hidden-md-down(src='img/qantas-card-front.png', alt='')
+                .row
+                    .col-xs-12.col-sm-12.col-md-12.col-lg-12
+                        h2.m-b-1 Current address
+                        p We&apos;ll send your Qantas Premier credit card to this address so it can&apos;t be a PO box.
+
+                .row.form-group.ui-widget
+                    .col-xs-12.col-sm-12.col-md-12.col-lg-8
+                        label(for='address') Address
+                        input#address.form-control(type='text', placeholder='80 George Street, Sydney NSW, 2000')
+                .row.form-group
+                    .col-xs-12
+                        label How long have you lived here?
+                    .col-xs-12.col-sm-12.col-md-12.col-lg-4
+                        label(for='how_long_years').sr-only
+                            span How many years?
+                        select#how_many_years.selectpicker(data-style="btn-secondary", data-size="4")
+                            option Select
+                            option(selected='', value='1') 1 year
+                            option(value='2') 2 years
+                            option(value='3') 3 years
+                    .col-xs-12.col-sm-12.col-md-12.col-lg-4.mxs-t-1
+                        label(for='how_many_months').sr-only
+                            span How many months?
+                        select#how_many_months.selectpicker(data-style="btn-secondary", data-size="7")
+                            option Select
+                            option(value='1') 1 month
+                            option(value='2') 2 months
+                            option(value='3') 3 months
+                            option(value='1') 4 month
+                            option(value='2') 5 months
+                            option(selected='', value='3') 6 months
+                .row.form-group
+                    .col-xs-12.col-sm-12.col-md-12.col-lg-4
+                        label(for='residential_type')
+                            | Residential type
+                        select#residential_type.selectpicker(data-style="btn-secondary", data-size="4")
+                            option(selected='') Select
+                            option(selected='', value='1') Renting
+                            option(value='2') Owner
+                            option(value='3') Landlord
+                .row
+                    .col-xs-12.col-sm-12.col-md-12.col-lg-4.m-t-2
+                        button.btn.btn-primary.btn-block(type='submit') Continue
+            p.text-xs-center.small.m-t-2.page-footer
+                | © Qantas Airways Limited ABN 16 009 661 901

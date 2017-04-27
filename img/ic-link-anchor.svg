@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="8px" height="12px" viewBox="0 0 8 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.3 (33839) - http://www.bohemiancoding.com/sketch -->
+    <title>anchor link</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Links" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop---Links" transform="translate(-15.000000, -821.000000)" fill="#EE0000">
+            <g id="ANCHOR-LINKS" transform="translate(15.000000, 756.000000)">
+                <g id="down-arrows" transform="translate(0.000000, 65.000000)">
+                    <g id="Link-to-top" transform="translate(4.000000, 6.000000) scale(1, -1) rotate(-90.000000) translate(-4.000000, -6.000000) translate(-2.000000, 2.000000)">
+                        <polygon id="Combined-Shape" points="9.24632034 3 0.125 3 0.125 4 9.31738816 4 6.95342712 6.36396103 7.66053391 7.07106781 11.1960678 3.53553391 10.8425144 3.18198052 7.66053391 0 6.95342712 0.707106781 9.24632034 3"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

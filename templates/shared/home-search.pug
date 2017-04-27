@@ -1,0 +1,64 @@
+.parbase.tab-home-page.panel-container.multi-search-tabs
+    .multi-search-form__overlay
+    .multi-search-form(data-q-tabs="true")
+        ul.nav.nav-tabs.nav-tabs-dark.search-tabs(role='tablist')
+            li.nav-item(role='presentation')
+                a.nav-link.active.text-xs-center(data-toggle='tab', href='#search-tab-1', role='tab')
+                    i.icon-add-circle
+                    span Book a trip
+            li.nav-item(role='presentation')
+                a.nav-link.text-xs-center(data-toggle='tab', href='#search-tab-2', role='tab')
+                    i.icon-add-circle
+                    span Manage booking
+            li.nav-item(role='presentation')
+                a.nav-link.text-xs-center(data-toggle='tab', href='#search-tab-3', role='tab')
+                    i.icon-add-circle
+                    span Check-in
+            li.nav-item(role='presentation')
+                a.nav-link.text-xs-center(data-toggle='tab', href='#search-tab-4', role='tab')
+                    i.icon-add-circle
+                    span Flight status
+        // Tab panes
+        .tab-content.container__parsys
+            #search-tab-1.tab-pane.active(role='tabpanel')
+                .row.m-b-1
+                    .col-xs-6
+                        nav.nav.nav-inline.nav-dark
+                            a.nav-link.active(href='#') Flights
+                            a.nav-link(href='#') Hotels
+                            a.nav-link(href='#') Cars
+                    .col-xs-6.text-xs-right
+                        ul.nav.nav-inline.nav-dark
+                            li.nav-item
+                                label.custom-control.custom-radio
+                                    input.custom-control-input(name='radio', type='radio')
+                                    span.custom-control-indicator
+                                    span.custom-control-description Normal
+                            li.nav-item
+                                label.custom-control.custom-radio
+                                    input.custom-control-input(name='radio', type='radio')
+                                    span.custom-control-indicator
+                                    span.custom-control-description Normal
+                            li.nav-item
+                                a.link.link-internal(href='#') Normal
+                                    i.icon-arrow-right
+                            li.nav-item
+                                a.link.link-internal(href='#') Normal
+                                    i.icon-arrow-right
+                .row.m-t-1
+                    .col-xs-5
+                        .form-group.m-b-0
+                            label.inline-label From
+                            input.form-control(type='text', placeholder='From', value='Sydney, Australia')
+                    .col-xs-5
+                        .form-group.m-b-0
+                            label.inline-label To
+                            input.form-control(type='text', placeholder='', value='')
+                    .col-xs-2
+                        button.btn.btn-primary.btn-block(type='submit')
+                            i.icon-chevron-right
+            #search-tab-2.tab-pane(role='tabpanel')
+
+            #search-tab-3.tab-pane(role='tabpanel')
+
+            #search-tab-4.tab-pane(role='tabpanel')

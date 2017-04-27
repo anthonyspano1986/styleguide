@@ -1,0 +1,85 @@
+extends shared/master.pug
+
+block pageContent
+    .wrapper
+        include shared/q-money-sidebar.pug
+        include shared/q-money-header.pug
+        main#pagecontent.q-money-main-content(role='main')
+            nav.page-actions.m-b-1(role='navigation')
+                a.link.link-back(href='#')
+                    i.icon-chevron-left
+                    | Back to section link
+                a.link.link-save-exit.hidden-xs-down(href='#') Save and exit
+                    i.icon-exit-to-app
+            .content-panel.card
+
+                .row
+                    .col-xs-12.col-lg-12
+                        h2.m-b-1 Financial commitments
+
+                // Form
+                .row.form-group
+                    .col-xs-12.col-lg-12
+                        label.form-label.d-block.m-b-0 Do you have any credit cards?
+                        label.custom-control.custom-radio
+                            input.custom-control-input(name='credit-cards', type='radio', id='credit_cards_yes', checked='')
+                            span.custom-control-indicator
+                            span.custom-control-description Yes
+                        label.custom-control.custom-radio
+                            input.custom-control-input(name='credit-cards', type='radio', id='credit_cards_no')
+                            span.custom-control-indicator
+                            span.custom-control-description No
+                .row.form-group
+                    .col-xs-12.col-lg-4.mxs-b-1
+                        label.form-label(for='total_credit_limit') Total credit limit
+                        input#total_credit_limit.form-control(type='text', placeholder='$ 10,000')
+                    .col-xs-12.col-lg-4
+                        label.form-label.text-nowrap(for='total_outstanding_balance') Total outstanding balance
+                        input#total_outstanding_balance.form-control(type='text', placeholder='$ 1,200')
+                .row.form-group
+                    .col-xs-12.col-lg-12
+                        label.form-label.d-block.m-b-0 Do you have any home loans, personal loans, store cards or charge cards?
+                        label.custom-control.custom-radio
+                            input.custom-control-input(name='other-loans', type='radio', id='other_loans_yes', checked='')
+                            span.custom-control-indicator
+                            span.custom-control-description Yes
+                        label.custom-control.custom-radio
+                            input.custom-control-input(name='other-loans', type='radio', id='other_loans_no')
+                            span.custom-control-indicator
+                            span.custom-control-description No
+
+                #current-loans
+                    ul.current-loans-list.list-unstyled.m-b-2(aria-live='polite', aria-relevant='current loans')
+                        li
+                            .row.form-group
+                                .col-xs-12.col-lg-8
+                                    label(for='loan_type') Loan type
+                                    select#loan_type.selectpicker(data-style="btn-secondary", data-size="2")
+                                        option Select
+                                        option Home loan
+                            .row.form-group
+                                .col-xs-12.col-lg-4.mxs-b-1
+                                    label(for='outstanding_balance1').text-nowrap Outstanding balance
+                                    input#outstanding_balance1.form-control(type='text', placeholder='$ 520,800')
+                                .col-xs-12.col-lg-4.mxs-b-1
+                                    label(for='repaymentsamount1').text-nowrap Repayments (your share only)
+                                    input#repaymentsamount1.form-control(type='text', placeholder='$ 1,800')
+                                .col-xs-12.col-lg-4.m-t-2
+                                    select#repayments_type1.selectpicker(data-style="btn-secondary", data-size="2")
+                                        option Select
+                                        option monthly
+
+                    hr
+                    .row.form-group.m-t-2.m-b-2
+                        .col-xs-6
+                            a.link.link-add(href='#')
+                                i.icon-add-circle
+                                | Add another
+                        .col-xs-6
+
+                .row
+                    .col-xs-12.col-lg-4
+                        button.btn.btn-primary.btn-block(type='submit') Continue
+
+            p.text-xs-center.small.m-t-2.page-footer
+                | © Qantas Airways Limited ABN 16 009 661 901

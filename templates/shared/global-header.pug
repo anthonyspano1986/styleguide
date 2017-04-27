@@ -1,0 +1,36 @@
+// GLOBAL HEADER
+header#header.global-header(role='banner')
+    .row-inner
+        .skiplinks(data-skip-prefix='Skip to').sr-only
+            a(href='#main') Skip to content
+            a.skip-to-multi-search(href='#panel-book-a-trip')
+                | Skip to
+                | Book a trip
+            a.skip-to-multi-search(href='#panel-manage-booking')
+                | Skip to
+                | Manage booking
+            a.skip-to-multi-search(href='#panel-check-in')
+                | Skip to
+                | Check-in
+            a.skip-to-multi-search(href='#panel-flight-status')
+                | Skip to
+                | Flight status
+        a.logo-qantas(href='/') Qantas Airways
+        .login-ribbon
+            button.login-ribbon__button.login-ribbon__button--closed.login-ribbon__button--logged-out(data-reactroot='', aria-expanded='false')
+                span.login-ribbon__label Log in
+        nav.menu-top
+            ul
+                li
+                    a.menu-top__navigation(href='#')
+                        | Menu
+                        span
+        .region-selector-display
+            a(tabindex='0')
+                span Australia (English)
+        form#search-top-query-form.search-top(action='https://qantas.resultspage.com/search', method='get', name='queryForm', target='_top', data-parsley-validate='', onsubmit='return false')
+            input(type='hidden', value='Q', name='p')
+            input(type='hidden', value='custom', name='ts')
+            input#sli_search_1.search-top__text-input(placeholder='', type='text', title='', accesskey='s', name='w')
+            button.search-top__button(type='submit')
+        a.logo-oneworld(href='http://www.qantas.com/travel/airlines/oneworld/global/en') Oneworld

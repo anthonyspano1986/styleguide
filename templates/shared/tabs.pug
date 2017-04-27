@@ -1,0 +1,28 @@
+h1#tabs.category-head Tabs
+
+section.row
+    article.col-sm-4
+        .row
+            .col-xs-12.col-sm-10
+                h4.no-top-margin-xs Basic example
+    article.col-sm-8
+        div
+            .code-source-wrapper
+                .module
+                    // Nav tabs
+                    ul.nav.nav-tabs(role='tablist')
+                      li.nav-item
+                        a.nav-link.active(data-toggle='tab', href='#home', role='tab') Home
+                      li.nav-item
+                        a.nav-link(data-toggle='tab', href='#profile', role='tab') Profile
+                      li.nav-item
+                        a.nav-link(data-toggle='tab', href='#messages', role='tab') Messages
+                      li.nav-item
+                        a.nav-link(data-toggle='tab', href='#settings', role='tab') Settings
+
+                    // Tab panes
+                    .tab-content.bg-faded
+                      #home.tab-pane.fade.in.active.p-a-2(role='tabpanel') Home content
+                      #profile.tab-pane.fade.p-a-2(role='tabpanel') Profile content
+                      #messages.tab-pane.fade.p-a-2(role='tabpanel') Messages content
+                      #settings.tab-pane.fade.p-a-2(role='tabpanel') Settings content

@@ -1,0 +1,36 @@
+/*  
+------------------------------------------
+  Accessibility Skip Links
+------------------------------------------  
+*/
+
+.skiplinks {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.skiplinks li {
+  font-size: 1.2rem;
+  list-style: none;
+}
+
+.skiplinks li a {
+  position: absolute;
+  left: -9999em; /* render skiplinks offscreen for screen readers */
+  z-index: 4; /* screen reader shortcut navigation can be layered at z-index 50 */
+  white-space: nowrap;
+  color: #000;
+  padding: 1rem;
+  border: 2px solid #128be0;
+  display: block;
+  width: 100%;
+}
+
+.skiplinks li a:focus,
+.skiplinks li a:active {
+  left: 0;
+  background-color: #5dbafc;
+  outline: none;
+}
